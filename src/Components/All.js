@@ -1,9 +1,17 @@
 import React from "react";
+import Footer from "./Footer";
 
-const All= () => {
-  return <h1 style={styles.page}>Create an account to explore more! all</h1>;
+const All = () => {
+  return (
+    <div>
+      <h1>All</h1>
+      <h1>All</h1>
+      <h1>All</h1>
+      <h1>All</h1>
+      <h1>All</h1>
+      <Footer />
+    </div>
+  );
 };
-
-const styles = { page: { textAlign: "center", marginTop: "50px", fontSize: "24px", color: "purple" } };
 
 export default All;
