@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
@@ -10,9 +11,14 @@ import Bangles from "./Components/Bangles.js";
 import Signup from "./Components/Signup.js";
 
 
+=======
+import React from 'react'
+import Footer from './Components/Footer'
+>>>>>>> 654736a (footer done)
 
-function App() {
+export default function App() {
   return (
+<<<<<<< HEAD
     <Router>
       <Navbar />
       <Routes>
@@ -26,6 +32,11 @@ function App() {
       </Routes>
     </Router>
   );
+=======
+    <div>
+      <Footer />
+    </div>
+  )
+>>>>>>> 654736a (footer done)
 }
 
-export default App;
