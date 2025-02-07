@@ -1,58 +1,70 @@
-/* Container styling */
+/* Container Styling */
 .container {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  /* Page Title */
-  .title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Grid Layout */
+  width: 90%;
+  margin: auto;
+  padding: 4%;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns, flexible */
+  gap: 40px;
+}
+
+/* Individual Product Items */
+.grid-item {
+  background-color: #fff;
+  /* border-radius: 8px; */
+  overflow: hidden; /* Prevents overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+/* Product Image Styling */
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Maintains square ratio */
+  object-fit: contain; /* Ensures full image is visible */
+}
+
+/* Product Details - Align text to the left */
+.product-details {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Product Name */
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Product Price */
+p {
+  font-size: 1rem;
+  color: #333;
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for web */
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns for tablets */
   }
-  
-  /* Product Card */
-  .grid-item {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
   }
-  
-  .grid-item:hover {
-    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 1 column for extra small screens */
   }
-  
-  /* Product Image */
-  .product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .title {
-      font-size: 1.5rem;
-    }
-  
-    .grid-item {
-      padding: 10px;
-    }
-  }  
+}
