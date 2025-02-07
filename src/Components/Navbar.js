@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="user-menu">
           <Link to="/signup">
             <FaUser className="user-icon" />
-            <span>Sign Up</span>
+            <span>SignUp</span>
           </Link>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link to="/all">All</Link>
         <Link to="/necklace">Necklace</Link>
         <Link to="/chains">Chains</Link>
-        <Link to="/earrings-rings">Ear Rings & Rings</Link>
+        <Link to="/earrings-rings">EarRings & Rings</Link>
         <Link to="/bangles">Bangles</Link>
       </div>
     </nav>

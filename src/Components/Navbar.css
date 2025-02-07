@@ -1,12 +1,14 @@
-
+/* Navbar Container */
+body{
+    overflow-x: hidden;
+}
 .navbar {
     background: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
-    text-align: center;
   }
   
-  
+  /* Main Navbar Layout */
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -15,12 +17,32 @@
     margin: auto;
   }
   
- 
+  /* Logo */
+  .logo {
+    flex-shrink: 0; /* Prevents shrinking */
+  }
+  
   .logo a {
     font-size: 20px;
     font-weight: bold;
     color: purple;
     text-decoration: none;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 150px; /* Aligns with logo */
+    gap: 50px;
+    padding-top: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+   
   }
   
   /* Search Container */
@@ -53,32 +75,19 @@
     color: gray;
     text-decoration: none;
     gap: 5px;
+    margin-left: 10px;
   }
   
   .user-icon {
     font-size: 18px;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
-    margin-left: 2%;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+    margin-top: 5px;
   }
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {
     .navbar-container {
       flex-direction: column;
-      text-align: center;
+      align-items: flex-start; /* Aligns everything to start */
     }
   
     .search-container {
@@ -89,6 +98,188 @@
     .nav-links {
       flex-direction: column;
       gap: 10px;
+      align-items: flex-start; /* Align to start */
+      
     }
   }
+  @media screen and (min-width: 375px)and (max-width: 1024px) {
+    .navbar-container {
+      flex-direction: row;
+      align-items: flex-start; /* Aligns everything to start */
+    }
+  
+    .search-container {
+      width: 100%;
+      margin-top: 45px;
+      margin-left: -50%;
+    }
+  
+    .nav-links {
+      flex-direction: row;
+      gap: 9px;
+      margin-left: -20%;
+ 
+      
+    }
+    .user-icon span{
+        margin-top: 17px;
+    }
+   
+  }
+  @media screen and (min-width: 360px) and (max-width: 740px) {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -50%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -25%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -25%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+@media screen and (min-width: 1024px)  {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -18%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+@media screen and (min-width: 853px) and (max-width:912px) {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -22%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+@media screen and (min-width: 344px) and (max-width:540px) {
+    .navbar-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -36%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px; /* Increased gap */
+        width: 100%; /* Expands to full width */
+        justify-content: space-around; /* Distributes links evenly */
+        margin-left: 0; /* Align properly */
+    }
+
+    .user-icon span {
+        margin-top: 17px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 412px) {
+
+ .search-container {
+        width: 100%;
+        margin-top: 45px;
+        margin-left: -56%;
+    }
+}
+
+ 
+
   
