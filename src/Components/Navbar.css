@@ -49,6 +49,8 @@ body{
   .search-container {
     position: relative;
     width: 300px;
+    margin-right: 10px;
+   
   }
   
   .search-container input {
@@ -84,25 +86,20 @@ body{
   }
   
   /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: flex-start; /* Aligns everything to start */
-    }
-  
+
+
+
+  @media screen and (min-width: 412px) and (max-width: 430px) {
+
     .search-container {
-      width: 100%;
-      margin-top: 10px;
-    }
+           width: 100%;
+           margin-top: 45px;
+           margin-left: -56%;
+       }
+   }
+
   
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start; /* Align to start */
-      
-    }
-  }
-  @media screen and (min-width: 375px)and (max-width: 1024px) {
+  @media screen and (min-width: 375px) {
     .navbar-container {
       flex-direction: row;
       align-items: flex-start; /* Aligns everything to start */
@@ -126,7 +123,7 @@ body{
     }
    
   }
-  @media screen and (min-width: 360px) and (max-width: 740px) {
+  @media screen and (min-width: 360px)  {
     .navbar-container {
         flex-direction: row;
         align-items: flex-start;
@@ -150,7 +147,7 @@ body{
         margin-top: 17px;
     }
 }
-@media screen and (min-width: 740px) and (max-width: 1024px) {
+@media screen and (min-width: 740px)  {
     .navbar-container {
         flex-direction: row;
         align-items: flex-start;
@@ -175,7 +172,8 @@ body{
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+@media screen and (min-width: 344px)  {
     .navbar-container {
         flex-direction: row;
         align-items: flex-start;
@@ -184,79 +182,7 @@ body{
     .search-container {
         width: 100%;
         margin-top: 45px;
-        margin-left: -25%;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 20px; /* Increased gap */
-        width: 100%; /* Expands to full width */
-        justify-content: space-around; /* Distributes links evenly */
-        margin-left: 0; /* Align properly */
-    }
-
-    .user-icon span {
-        margin-top: 17px;
-    }
-}
-@media screen and (min-width: 1024px)  {
-    .navbar-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .search-container {
-        width: 100%;
-        margin-top: 45px;
-        margin-left: -18%;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 20px; /* Increased gap */
-        width: 100%; /* Expands to full width */
-        justify-content: space-around; /* Distributes links evenly */
-        margin-left: 0; /* Align properly */
-    }
-
-    .user-icon span {
-        margin-top: 17px;
-    }
-}
-@media screen and (min-width: 853px) and (max-width:912px) {
-    .navbar-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .search-container {
-        width: 100%;
-        margin-top: 45px;
-        margin-left: -22%;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 20px; /* Increased gap */
-        width: 100%; /* Expands to full width */
-        justify-content: space-around; /* Distributes links evenly */
-        margin-left: 0; /* Align properly */
-    }
-
-    .user-icon span {
-        margin-top: 17px;
-    }
-}
-@media screen and (min-width: 344px) and (max-width:540px) {
-    .navbar-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .search-container {
-        width: 100%;
-        margin-top: 45px;
-        margin-left: -36%;
+        margin-left: -56%;
     }
 
     .nav-links {
@@ -280,6 +206,88 @@ body{
     }
 }
 
+
  
 
-  
+@media screen and (min-width: 412px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(30px); /* Moves it left by 30px */
+    }
+}
+
+
+
+@media screen and (min-width: 390px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(20px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 430px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(40px); /* Moves it left by 30px */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(230px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 912px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(200px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 540px) {
+    .search-container {
+        width: 100%;
+        margin-top: 45px;
+        transform: translateX(80px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 820px) {
+    .search-container {
+        width: 80%;
+        margin-top: 45px;
+        transform: translateX(100px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 853px) {
+    .search-container {
+        width: 80%;
+        margin-top: 45px;
+        transform: translateX(100px); /* Moves it left by 30px */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .search-container {
+        width: 80%;
+        margin-top: 45px;
+        transform: translateX(100px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 1024px) {
+    .search-container {
+        width: 80%;
+        margin-top: 45px;
+        transform: translateX(140px); /* Moves it left by 30px */
+    }
+}
+@media screen and (min-width: 1280px) {
+    .search-container {
+        width: 80%;
+        margin-top: 45px;
+        transform: translateX(140px); /* Moves it left by 30px */
+    }
+}

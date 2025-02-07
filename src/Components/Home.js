@@ -1,9 +1,15 @@
 import React from "react";
+import "./Home.css"; // Import the external CSS
 
-const Home= () => {
-  return <h1 style={styles.page}>Create an account to explore more HOME!</h1>;
+const Home = () => {
+  return (
+    <div className="home-container">
+      <div className="home-content">
+        <h1>Welcome to Our Platform!</h1>
+        <p>Create an account to explore more features and benefits.</p>
+      </div>
+    </div>
+  );
 };
-
-const styles = { page: { textAlign: "center", marginTop: "50px", fontSize: "24px", color: "purple" } };
 
 export default Home;

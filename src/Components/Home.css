@@ -1,0 +1,48 @@
+/* Background container */
+.home-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    background-image: url(""); /* Local image path */
+    background-size: cover;
+    background-position: center;
+    padding-left: 10%;
+    color: white;
+}
+
+/* Content box */
+.home-content {
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .home-container {
+        justify-content: center; /* Center content for tablets */
+        padding-left: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-container {
+        padding-left: 0; /* No padding for small screens */
+        text-align: center;
+    }
+
+    .home-content {
+        width: 90%;
+        max-width: 300px;
+        padding: 10px;
+    }
+}
