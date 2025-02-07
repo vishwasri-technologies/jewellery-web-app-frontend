@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -10,9 +11,13 @@ import Bangles from "./Components/Bangles.js";
 import Signup from "./Components/Signup.js";
 
 
+=======
+import Chains from "./Components/Chains";
+>>>>>>> ac75082 (started chains)
 
-function App() {
+const App = () => {
   return (
+<<<<<<< HEAD
     <Router>
       <Navbar />
       <Routes>
@@ -25,7 +30,12 @@ function App() {
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
+=======
+    <div>
+      <Chains />
+    </div>
+>>>>>>> ac75082 (started chains)
   );
-}
+};
 
 export default App;
