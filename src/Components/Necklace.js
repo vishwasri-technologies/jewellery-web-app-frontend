@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Temple Nacklace Set",
+    name: "Temple Necklace Set",
     price: "₹1400",
     image: image2,
   },
@@ -41,13 +41,13 @@ const products = [
   },
   {
     id: 4,
-    name: "Cubic Zirconia Nacklace ",
+    name: "Cubic Zirconia Necklace",
     price: "₹1400",
     image: image4,
   },
   {
     id: 5,
-    name: "Gold & Pearl necklace set",
+    name: "Gold & Pearl Necklace Set",
     price: "₹1400",
     image: image5,
   },
@@ -59,13 +59,13 @@ const products = [
   },
   {
     id: 7,
-    name: "Antique Nacklace",
+    name: "Antique Necklace",
     price: "₹1400",
     image: image7,
   },
   {
     id: 8,
-    name: "Red Kundan Necklace ",
+    name: "Red Kundan Necklace",
     price: "₹1400",
     image: image8,
   },
@@ -77,19 +77,19 @@ const products = [
   },
   {
     id: 10,
-    name: "Nacklaces Set",
+    name: "Necklace Set",
     price: "₹1400",
     image: image10,
   },
   {
     id: 11,
-    name: "Sofine Oxidised Plated Mirror Necklace Set",
+    name: "Sofine Oxidised Mirror Necklace Set",
     price: "₹1400",
     image: image11,
   },
   {
     id: 12,
-    name: "Long Nacklace Set",
+    name: "Long Necklace Set",
     price: "₹1400",
     image: image12,
   },
@@ -101,13 +101,13 @@ const products = [
   },
   {
     id: 14,
-    name: "Fancy Jewellery Set ",
+    name: "Fancy Jewellery Set",
     price: "₹1400",
     image: image14,
   },
   {
     id: 15,
-    name: "Lakshmi & Peacock Motifs Nacklace Set",
+    name: "Lakshmi & Peacock Motifs Necklace Set",
     price: "₹1400",
     image: image15,
   },
@@ -119,7 +119,7 @@ const products = [
   },
   {
     id: 17,
-    name: "Lakshmi Nacklace Set",
+    name: "Lakshmi Necklace Set",
     price: "₹1400",
     image: image17,
   },
@@ -129,30 +129,25 @@ const products = [
     price: "₹1400",
     image: image18,
   },
-  
 ];
 
 const Necklace = () => {
   return (
     <div>
-    <div className="container">
-      <div className="grid-container">
-        {products.map((product) => (
-          <div key={product.id} className="grid-item">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-image"
-            />
-            <div className="product-details">
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
+      <div className="necklace-wrapper">
+        <div className="necklace-grid">
+          {products.map((product) => (
+            <div key={product.id} className="necklace-card">
+              <img src={product.image} alt={product.name} className="necklace-img" />
+              <div className="necklace-info">
+                <h3 className="necklace-title">{product.name}</h3>
+                <p className="necklace-price">{product.price}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   );
 };
