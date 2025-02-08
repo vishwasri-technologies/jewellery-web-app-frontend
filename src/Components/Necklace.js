@@ -1,5 +1,7 @@
 import React from "react";
 import "./Necklace.css";
+import { useLocation } from "react-router-dom";
+
 import image1 from "../assets/necklace/image-1.png"; 
 import image2 from "../assets/necklace/image-2.png";
 import image3 from "../assets/necklace/image-3.png";
@@ -131,20 +133,37 @@ const products = [
   },
 ];
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 const Necklace = () => {
+  const query = useQuery().get("name"); // Get the product name from the URL
+  const selectedProduct = products.find((product) => product.name === query);
+
   return (
     <div>
-      <div className="necklace-wrapper">
-        <div className="necklace-grid">
-          {products.map((product) => (
-            <div key={product.id} className="necklace-card">
-              <img src={product.image} alt={product.name} className="necklace-img" />
-              <div className="necklace-info">
-                <h3 className="necklace-title">{product.name}</h3>
-                <p className="necklace-price">{product.price}</p>
+    <div className="container">
+      <div className="grid-container">
+      {selectedProduct ? (
+          <div key={selectedProduct.id} className="grid-item">
+            <img src={selectedProduct.image} alt={selectedProduct.name} className="product-image" />
+            <div className="product-details">
+              <h3>{selectedProduct.name}</h3>
+              <p>{selectedProduct.price}</p>
+            </div>
+          </div>
+        ) : (
+          products.map((product) => (
+            <div key={product.id} className="grid-item">
+              <img src={product.image} alt={product.name} className="product-image" />
+              <div className="product-details">
+                <h3>{product.name}</h3>
+                <p>{product.price}</p>
               </div>
             </div>
-          ))}
+          ))
+        )}
         </div>
       </div>
       <Footer />
