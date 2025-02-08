@@ -10,6 +10,7 @@ import Bangles from "./Components/Bangles.js";
 import Signup from "./Components/Signup.js";
 import Logout from "./Components/Logout.js";
 import Login from "./Components/Login.js";
+import Reset from "./Components/Reset.js";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
-
+        <Route path="/reset" element={<Reset />} />
       </Routes>
     </Router>
   );
