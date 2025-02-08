@@ -24,55 +24,55 @@ const products = [
   {
     id: 1,
     name: "Choker with Earrings",
-    price: "₹1400",
+    price: "₹1399",
     image: image1,
   },
   {
     id: 2,
     name: "Temple Necklace Set",
-    price: "₹1400",
+    price: "₹599",
     image: image2,
   },
   {
     id: 3,
     name: "Stone-Studded Choker",
-    price: "₹1400",
+    price: "₹1799",
     image: image3,
   },
   {
     id: 4,
     name: "Cubic Zirconia Necklace",
-    price: "₹1400",
+    price: "₹999",
     image: image4,
   },
   {
     id: 5,
     name: "Gold & Pearl Necklace Set",
-    price: "₹1400",
+    price: "₹2899",
     image: image5,
   },
   {
     id: 6,
     name: "Polki Choker",
-    price: "₹1400",
+    price: "₹3499",
     image: image6,
   },
   {
     id: 7,
     name: "Antique Necklace",
-    price: "₹1400",
+    price: "₹899",
     image: image7,
   },
   {
     id: 8,
     name: "Red Kundan Necklace",
-    price: "₹1400",
+    price: "₹1799",
     image: image8,
   },
   {
     id: 9,
     name: "Pearl Necklace Set",
-    price: "₹1400",
+    price: "₹1999",
     image: image9,
   },
   {
@@ -84,7 +84,7 @@ const products = [
   {
     id: 11,
     name: "Sofine Oxidised Mirror Necklace Set",
-    price: "₹1400",
+    price: "₹1499",
     image: image11,
   },
   {
@@ -114,19 +114,19 @@ const products = [
   {
     id: 16,
     name: "Temple Haram",
-    price: "₹1400",
+    price: "₹2999",
     image: image16,
   },
   {
     id: 17,
     name: "Lakshmi Necklace Set",
-    price: "₹1400",
+    price: "₹999",
     image: image17,
   },
   {
     id: 18,
     name: "Lakshmi Haram",
-    price: "₹1400",
+    price: "₹1599",
     image: image18,
   },
 ];

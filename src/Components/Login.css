@@ -1,0 +1,119 @@
+
+   /* Container for the login page */
+   .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Background styling */
+  .login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/LoginBg/Lb1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+    filter: brightness(0.65);
+  }
+  
+  /* Login form styling */
+  .login-form {
+    background-color: #fff;
+    padding: 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 350px;
+  }
+  
+  /* Form heading */
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input fields */
+  .login-form input {
+    display: flex;
+    width: 100%;
+    padding: 3.5% 0;
+    margin: 3% 0 3% 0;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: rgb(230, 226, 226);
+    padding-left: 3%;
+  }
+  
+  /* Reset password section */
+  .login-reset-password-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  
+  .login-reset-password-container input[type="checkbox"] {
+    margin-left:-0.10%;
+    margin-right: 8px;
+  }
+  
+  .login-reset-password {
+    font-size: 12px;
+    color: #f1312a;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 78%;
+  }
+  
+  .login-reset-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login button styling */
+  .login-button {
+    background-color: #7c176a; /* Purple color */
+    color: white;
+    border: none;
+    padding: 3%;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;;
+    margin-top: 2%;
+  }
+  
+  
+  .login-form p {
+    margin-top: 15px;
+    color: #030303;
+    text-align: center;
+  }
+  
+  
+  .login-form a {
+    color: #3077c4;
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 460px) {
+    .login-form {
+        padding: 4% 4%;
+        margin: 10%;
+      }
+  }
