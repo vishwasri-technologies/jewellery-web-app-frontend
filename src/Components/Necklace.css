@@ -1,72 +1,66 @@
-/* Container Styling */
 .container {
   width: 90%;
   margin: auto;
   padding: 4%;
 }
 
-/* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns, flexible */
-  gap: 40px;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  gap: 50px;
 }
 
-/* Individual Product Items */
 .grid-item {
   background-color: #fff;
-  border-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  overflow: hidden; /* Prevents overflow */
+  border-radius: 3%;
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
 }
 
-/* Product Image Styling */
 .product-image {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Maintains square ratio */
-  object-fit: contain; /* Ensures full image is visible */
+  aspect-ratio: 1 / 1; 
+  object-fit: contain; 
 }
 
-/* Product Details - Align text to the left */
 .product-details {
   width: 100%;
-  padding: 10px 0;
+  padding: 2% 0 0 0;
 }
 
-/* Product Name */
 h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 10px 0;
-  text-align: left; /* Aligns text to the left */
+  margin: 1.5% 0 1.5% 0;
+  text-align: left; 
 }
 
-/* Product Price */
 p {
   font-size: 1rem;
   color: #333;
-  text-align: left; /* Aligns text to the left */
+  text-align: left; 
+  margin-top: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns for tablets */
+    padding-top: 2%;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    padding-top: 2%;
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 1 column for extra small screens */
+    padding-top: 2%;
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
