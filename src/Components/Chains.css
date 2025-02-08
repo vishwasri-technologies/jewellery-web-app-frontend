@@ -1,51 +1,64 @@
+
 .chains-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 30px;
-  padding: 20px;
   width: 90%;
-  max-width: 1200px;
   margin: auto;
-  min-height: 600px;
-  margin-top: 38px;
+  padding: 4%;
 }
 
-.product {
-  text-align: left;
-  position: relative;
+.chains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  gap: 50px;
 }
 
-.product img {
+.chains-item {
+  background-color: #fff;
+  border-radius: 3%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.chains-img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1; 
+  object-fit: contain; 
 }
 
-.product h3 {
-  font-size: 15px;
-  margin: 10px 0;
-  color: #000000;
-  font-family: "Poppins, sans-serif";
-  margin-left: 20px;
-  line-height: 0.10;
+.chains-info {
+  width: 100%;
+  padding: 2% 0 0 0;
 }
 
-.product p {
-  font-size: 13px;
+h3 {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #000000;
-  margin-left: 20px;
+  margin: 1.5% 0 1.5% 0;
+  text-align: left; 
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  text-align: left; 
+  margin-top: 0;
 }
 
 @media (max-width: 1024px) {
-  .chains-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
+  .chains-grid {
+    padding-top: 2%;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
   }
 }
 
 @media (max-width: 768px) {
-  .chains-container {
-    grid-template-columns: 1fr; /* 1 item per row for mobile */
+  .chains-grid {
+    padding-top: 2%;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  h3 {
+    font-size: 1rem; 
   }
 }
