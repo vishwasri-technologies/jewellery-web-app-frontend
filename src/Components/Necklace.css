@@ -54,13 +54,21 @@ p {
 @media (max-width: 768px) {
   .grid-container {
     padding-top: 2%;
+    gap: 25px;
     grid-template-columns: repeat(2, 1fr); 
+  }
+  h3 {
+    font-size: 1rem; 
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px)  {
   .grid-container {
     padding-top: 2%;
+    gap: 25px;
     grid-template-columns: repeat(2, 1fr); 
   }
-}
+  h3 {
+    font-size: 1rem; 
+  }
+} */
