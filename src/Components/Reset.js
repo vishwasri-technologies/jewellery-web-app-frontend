@@ -1,9 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
+import "./Reset.css";
 
-const Reset= () => {
-  return <h1 style={styles.page}>Create an account to explore more!</h1>;
+const Reset = () => {
+  return (
+    <div className="reset-container">
+      <div className="reset-form">
+        <h2>Reset Password</h2>
+        <form>
+          <label htmlFor="New Password">New Password</label>
+          <input type="new password" id="new password" placeholder="" />
+
+          <label htmlFor="Confirm password">Confirm Password</label>
+          <input type="confirm password" id="confirm password" placeholder="" />
+    
+          <button type="submit" className="save-button">
+            Save password
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
-
-const styles = { page: { textAlign: "center", marginTop: "50px", fontSize: "24px", color: "purple" } };
-
 export default Reset;

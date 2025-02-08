@@ -26,7 +26,11 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
         <Route path="/reset" element={<Reset />} />
+=======
+        <Route path="/Reset" element={<Reset />} />
+>>>>>>> 939a559 (resolved merge conflicts in app.js)
       </Routes>
     </Router>
   );
