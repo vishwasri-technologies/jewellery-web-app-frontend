@@ -1,7 +1,10 @@
 /* Navbar Container */
-body{
-    overflow-x: hidden;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
 }
+
 
 .navbar {
     background: white;
@@ -36,7 +39,7 @@ body{
   .nav-links {
     display: flex;
     gap: 30px;
-    margin-left: 150px; /* Aligns with logo */
+   
     gap: 50px;
     padding-top: 30px;
   }
@@ -51,8 +54,10 @@ body{
   /* Search Container */
   .search-container {
     position: relative;
-    width: 300px;
-    /* margin-right: 10px; */
+    /* width: 200px; */
+    margin-right: -10%;
+  
+
    
   }
   
@@ -95,7 +100,7 @@ body{
   @media screen and (min-width: 412px) and (max-width: 430px) {
 
     .search-container {
-           width: 100%;
+           width: 80%;
            margin-top: 45px;
            margin-left: -56%;
        }
@@ -109,7 +114,7 @@ body{
     }
   
     .search-container {
-      width: 100%;
+      width: 80%;
       margin-top: 45px;
       margin-left: -50%;
     }
@@ -133,7 +138,7 @@ body{
     }
 
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         margin-left: -50%;
     }
@@ -157,7 +162,7 @@ body{
     }
 
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         margin-left: -25%;
     }
@@ -183,7 +188,7 @@ body{
     }
 
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         margin-left: -56%;
     }
@@ -203,7 +208,7 @@ body{
 @media screen and (min-width: 360px) and (max-width: 412px) {
 
  .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         margin-left: -56%;
     }
@@ -214,7 +219,7 @@ body{
 
 @media screen and (min-width: 412px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(30px); /* Moves it left by 30px */
     }
@@ -224,14 +229,14 @@ body{
 
 @media screen and (min-width: 390px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(20px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 430px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(40px); /* Moves it left by 30px */
     }
@@ -239,35 +244,35 @@ body{
 
 @media screen and (min-width: 1024px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(230px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 912px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(200px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 540px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(80px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 820px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(100px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 853px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(100px); /* Moves it left by 30px */
     }
@@ -275,22 +280,26 @@ body{
 
 @media screen and (min-width: 768px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(100px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 1024px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
         transform: translateX(140px); /* Moves it left by 30px */
     }
 }
 @media screen and (min-width: 1280px) {
     .search-container {
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
+      
         transform: translateX(140px); /* Moves it left by 30px */
+    }
+    .nav-links{
+        margin-left: -5%;
     }
 }

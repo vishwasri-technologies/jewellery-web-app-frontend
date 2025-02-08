@@ -1,14 +1,83 @@
+// import React from "react";
+// import "./Home.css";
+// import necklace from "../assets/Home/Necklace.png";
+// import chains from "../assets/Home/Chain.png";
+
+// import earrings from "../assets/Home/Earrings.png";
+// import bangles from "../assets/Home/Bangles.png";
+
+// import arrival1 from "../assets/Home/Arrival1.png";
+// import arrival2 from "../assets/Home/Arrival2.png";
+// import arrival3 from "../assets/Home/Arrival3.png";
+
+// const Home = () => {
+//   return (
+//     <div>
+//       {/* Dazzling Designs Section */}
+//       <div className="dazzling-container">
+//         <div className="dazzling-text">
+//           <h1 className="dazzling-title">Dazzling Designs</h1>
+//           <p className="dazzling-description">
+//             Explore our exquisite collection of handcrafted jewelry,
+//             where every piece is meticulously designed to captivate and shine.
+//             From timeless classics to contemporary masterpieces,
+//             our dazzling designs are crafted with the finest materials
+//             to elevate your elegance.
+//           </p>
+//           <button className="dazzling-button">Explore Now</button>
+//         </div>
+//       </div>
+
+//       {/* Categories Section */}
+//       <div className="categories-section">
+//         <h2 className="section-title">Categories</h2>
+//         <div className="categories">
+//           {[{ img: necklace, name: "Necklace" },
+//             { img: chains, name: "Chains" },
+          
+//             { img: earrings, name: "Ear Rings" },
+//             { img: bangles, name: "Bangles" },
+//            ].map((item, index) => (
+//             <div className="category" key={index}>
+//               <img src={item.img} alt={item.name} />
+//               <p>{item.name}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Stunning Arrivals Section */}
+//       <div className="stunning-arrivals-section">
+//         <h2 className="section-title">Stunning Arrivals</h2>
+//         <div className="arrivals">
+//           {[arrival1, arrival2, arrival3].map((img, index) => (
+//             <div className="arrival" key={index}>
+//               <img src={img} alt={`Arrival ${index + 1}`} />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
+
 import React from "react";
 import "./Home.css";
 import necklace from "../assets/Home/Necklace.png";
 import chains from "../assets/Home/Chain.png";
-
 import earrings from "../assets/Home/Earrings.png";
 import bangles from "../assets/Home/Bangles.png";
-
 import arrival1 from "../assets/Home/Arrival1.png";
 import arrival2 from "../assets/Home/Arrival2.png";
 import arrival3 from "../assets/Home/Arrival3.png";
+import arrival4 from '../assets/Home/Arrival4.png';
+import giftImage1 from "../assets/Home/gift-1.png";
+import giftImage2 from "../assets/Home/gift-2.png";
 
 const Home = () => {
   return (
@@ -18,11 +87,10 @@ const Home = () => {
         <div className="dazzling-text">
           <h1 className="dazzling-title">Dazzling Designs</h1>
           <p className="dazzling-description">
-            Explore our exquisite collection of<br/> handcrafted jewelry,
-            where every piece is<br/> meticulously designed to captivate and<br/> shine.
-            From timeless classics to<br/> contemporary masterpieces,
-            our dazzling<br/> designs are crafted with the finest materials<br/>
-            to elevate your elegance.
+            Explore our exquisite collection of handcrafted jewelry, where every
+            piece is meticulously designed to captivate and shine. From timeless
+            classics to contemporary masterpieces, our dazzling designs are
+            crafted with the finest materials to elevate your elegance.
           </p>
           <button className="dazzling-button">Explore Now</button>
         </div>
@@ -32,12 +100,12 @@ const Home = () => {
       <div className="categories-section">
         <h2 className="section-title">Categories</h2>
         <div className="categories">
-          {[{ img: necklace, name: "Necklace" },
+          {[
+            { img: necklace, name: "Necklace" },
             { img: chains, name: "Chains" },
-          
             { img: earrings, name: "Ear Rings" },
             { img: bangles, name: "Bangles" },
-           ].map((item, index) => (
+          ].map((item, index) => (
             <div className="category" key={index}>
               <img src={item.img} alt={item.name} />
               <p>{item.name}</p>
@@ -57,9 +125,53 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+      {/* Expression of Love Section (Moved to the End) */}
+      <div className="expression-container">
+        <h2 className="expression-title">Expression of Love</h2>
+        <div className="expression-content">
+          <div className="expression-image">
+            <img src={arrival4} alt="Rings" />
+          </div>
+          <div className="expression-text">
+            <h3>A symbol of promises made to last</h3>
+            <p>
+              Celebrate life's meaningful moments with our exquisite rings,
+              crafted to symbolize promises that endure. Discover timeless
+              designs that capture the essence of commitment and elegance.
+            </p>
+            <button className="browse-button">Browse Collection</button>
+          </div>
+        </div>
+      </div>
+      <div className="gift-section">
+      <div className="gift-text">
+        <h2>Gift Elegance to Your Loved One</h2>
+        <p>
+          Celebrate the special moments with timeless jewelry that speaks from
+          the heart. Whether it's a dazzling necklace, elegant earrings, or a
+          charming bracelet, our exclusive collection has the perfect piece to
+          express your love.
+        </p>
+        <p>
+          Make every occasion unforgettable with a gift that lasts forever.
+          Explore our handcrafted designs and find the sparkle that matches
+          their smile.
+        </p>
+        <a href="/collection" className="gift-link">
+          Discover the Perfect Gift Today!
+        </a>
+      </div>
+      <div className="gift-images">
+        <img src={giftImage1} alt="Gift Moment" className="gift-img top-img" />
+        <img src={giftImage2} alt="Jewelry Box" className="gift-img bottom-img" />
+      </div>
     </div>
+    </div>
+    
   );
 };
 
 export default Home;
+
 
