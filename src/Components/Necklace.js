@@ -135,6 +135,7 @@ const products = [
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
+
 };
 
 const Necklace = () => {

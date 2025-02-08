@@ -23,6 +23,23 @@ const products = [
   { id: 16, name: "Temple Haram", price: "₹1400",category: "Necklace"  },
   { id: 17, name: "Lakshmi Nacklace Set", price: "₹1400",category: "Necklace"  },
   { id: 18, name: "Lakshmi Haram", price: "₹1400",category: "Necklace"  },
+
+  { id: 1, name: "Kundan Chain", price: "₹1400", category: "chains" },
+  { id: 2, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
+  { id: 3, name: "Antique Long Lakshmi Chain", price: "₹1400", category: "chains" },
+  { id: 4, name: "Classic Gold-Plated Chain", price: "₹1400", category: "chains" },
+  { id: 5, name: "Peacock Motifs", price: "₹1400", category: "chains" },
+  { id: 6, name: "Ramdev Pendant", price: "₹1400", category: "chains" },
+  { id: 7, name: "White Kundan Chain", price: "₹1400", category: "chains" },
+  { id: 8, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
+  { id: 9, name: "Antique Lakshmi Gold Chain", price: "₹1400", category: "chains" },
+  { id: 10, name: "Rani Haram", price: "₹1400", category: "chains" },
+  { id: 11, name: "Black Kundan Chain", price: "₹1400", category: "chains" },
+  { id: 12, name: "Ramdev Pendant Chain", price: "₹1400", category: "chains" },
+  { id: 13, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
+  { id: 14, name: "Short Chain", price: "₹1400", category: "chains" },
+  { id: 15, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
+
   
 ];
 
@@ -57,13 +74,13 @@ const Navbar = () => {
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      const matchedProducts = products.find((product) =>
+      const matchedProducts = products.filter((product) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
   
       if (matchedProducts.length > 0) {
         const category = matchedProducts[0].category.toLowerCase(); // Ensure category is lowercase
-        navigate(`/${category}?name=${encodeURIComponent(searchQuery)}`);
+        navigate(`/${category}?name=${encodeURIComponent(searchQuery)}`, { state: { matchedProducts } });
       } else {
         alert("No matching products found.");
       }

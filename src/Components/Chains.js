@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
+import { useLocation } from "react-router-dom";
+
 import image514 from '../assets/Chains/image514.png';
 import image513 from '../assets/Chains/image513.png';
 import image512 from '../assets/Chains/image512.png';
@@ -108,24 +110,38 @@ const products =[
     image: image500,
   },
 ]
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 const Chains = () => {
+  const query = useQuery().get("name"); // Get the product name from the URL
+  const selectedProduct = products.find((product) => product.name === query);
+
   return (
     <div>
       <div className="chains-container">
         <div className="chains-grid">
-          {products.map((product) => (
+            {selectedProduct ? (
+          <div key={selectedProduct.id} className="grid-item">
+            <img src={selectedProduct.image} alt={selectedProduct.name} className="product-image" />
+            <div className="product-details">
+              <h3>{selectedProduct.name}</h3>
+              <p>{selectedProduct.price}</p>
+            </div>
+          </div>
+        ) : (
+          products.map((product) => (
             <div key={product.id} className="chains-item">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="chains-img"
-              />
+              <img src={product.image} alt={product.name} className="chains-image" />
               <div className="chains-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
               </div>
             </div>
-          ))}
+          ))
+        )}
         </div>
       </div>
       <Footer />
