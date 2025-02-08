@@ -22,6 +22,7 @@ import pp19 from '../assets/All/pp19.png';
 import pp20 from '../assets/All/pp20.png';
 import pp21 from '../assets/All/pp21.png';
 import "./All.css";
+
 const products =[
   {
     id: 1,
