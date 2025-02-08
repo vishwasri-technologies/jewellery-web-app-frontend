@@ -8,6 +8,8 @@ import All from "./Components/All.js";
 import EarringsRings from "./Components/EarRings.js";
 import Bangles from "./Components/Bangles.js";
 import Signup from "./Components/Signup.js";
+import Logout from "./Components/Logout.js";
+import Login from "./Components/Login.js";
 
 const App = () => {
   return (
@@ -21,6 +23,9 @@ const App = () => {
         <Route path="/earrings-rings" element={<EarringsRings />} />
         <Route path="/bangles" element={<Bangles />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
     </Router>
   );

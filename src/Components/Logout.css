@@ -1,0 +1,79 @@
+/* Overlay to darken the background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal styles */
+  .modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .modal-message {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .cancel-button {
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d6d6d6;
+  }
+  
+  .logout-button {
+    background-color: #ffbcbc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff8f8f;
+  }
+  /* Background image for the app */
+  .app {
+      background-image: url('https://s3-alpha-sig.figma.com/img/f18d/ffec/2039794da5d88277a5794eff66b61138?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=H1xNDJJ2lWXvldTPQVFISR7i-CB7mo7TbkDLrfkzgHV15b-XYtTn4L8OSe7MAxvzkyqD4~L-sGu~4ecp4pAnv15FytToOKdlx~UTHL6ZHfK6fblcc7le9~fwTXUEsVyV~oekF2pBktZF19aMnS0gcy7NoB8ugvhXbTgYPWUgoMBovS1Vpm04nfZDt7Rz9D~n8-8IE2UkhxwOm-7tfAtU1FtFS-YuORfBvDCXzCFiGgFF~UG3RDZvgmEFc0agmPetqTEEJqmSMgaib73eh4fHrReiott4xGOty3PzYF-qFeKgBj2iZRKnac~cAzzHYlrSqLT7YtX6zB74M8rPoATBNQ__');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
