@@ -1007,204 +1007,6 @@ body, html {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* Happy Customers Section */
 .happy-customers-section2 {
     margin-top: 1rem;
@@ -1383,6 +1185,71 @@ body, html {
 
     }
 }
+
+@media screen and (min-width:375px){
+.happy-customers-section2 {
+
+margin-top: -50%;
+
+
+
+}
+}
+@media screen and (min-width:360px){
+    .happy-customers-section2 {
+    
+    margin-top: -50%;
+    
+    
+    
+    }
+    }
+    @media screen and (min-width:768px){
+        .happy-customers-section2 {
+        
+        margin-top: -30%;
+        
+        
+        
+        }
+        }
+        @media screen and (min-width:1024px){
+            .happy-customers-section2 {
+            
+            margin-top: -10%;
+            
+            
+            
+            }
+        }
+            
+            /* @media screen and (min-width:344px){
+                .happy-customers-section2 {
+                
+                margin-top: -60%;
+                
+                
+                
+                }
+                } */
+                /* @media screen and (min-width:853px){
+                    .happy-customers-section2 {
+                    
+                    margin-top: -30%;
+                    
+                    
+                    
+                    }
+                    } */
+                    @media screen and (min-width:1280px){
+                        .happy-customers-section2 {
+                        
+                        margin-top: 5%;
+                        
+                        
+                        
+                        }
+                    }
   
 
 
