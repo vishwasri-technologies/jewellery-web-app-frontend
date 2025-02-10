@@ -595,7 +595,7 @@ body, html {
     border-radius: 8px;
   }
   
-  .section-title {
+  .section-title1 {
     font-size: 2rem;
     color: #8d1983;
     font-weight: bold;
@@ -603,8 +603,8 @@ body, html {
     position: relative;
   }
   
-  .section-title::before,
-  .section-title::after {
+  .section-title1::before,
+  .section-title1::after {
     content: "";
     display: inline-block;
     width: 150px;
@@ -614,7 +614,7 @@ body, html {
     vertical-align: middle;
   }
   
-  .about-content {
+  .about-content1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -672,7 +672,7 @@ body, html {
   } 
 
    /* Happy Customers Section */
-.happy-customers-section {
+.happy-customers-section2 {
     margin-top: 1rem;
     text-align: center;
     padding: 3rem 2rem;
@@ -680,7 +680,7 @@ body, html {
   }
   
   /* Fix the heading position */
-  .happy-customers-section .section-title {
+  .happy-customers-section2 .section-title2 {
     position: relative;
     top: 20px; /* Adjust as needed */
     left: 50%;
@@ -708,7 +708,7 @@ body, html {
     height: 350px;
     width: 300px;
     margin-left:-10%;
-z-index: 2;
+    z-index: 2;
   }
   
   /* Images on the Left (4th and 5th) */

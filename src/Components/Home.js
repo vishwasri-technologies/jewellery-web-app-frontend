@@ -179,8 +179,8 @@ const Home = () => {
   {/* ABOUT US SECTION */}
             
   <div className="about-us-section">
-        <h2 className="section-title">About Us</h2>
-        <div className="about-content">
+        <h2 className="section-title1">About Us</h2>
+        <div className="about-content1">
           <div className="about-images">
             <img src={About1} alt="About Us 1" className="about-image" />
             <img src={About2} alt="About Us 2" className="about-image" />
@@ -204,8 +204,8 @@ const Home = () => {
 
 {/* CUSTOMER SECTION */}
 
-      <div className="happy-customers-section">
-        <h2 className="section-title">Happy Customers</h2>
+      <div className="happy-customers-section2">
+        <h2 className="section-title2">Happy Customers</h2>
         <div className="customer-images">
           <img src={customerImage3} alt="Customer 1" className="customer-image" />
           <img src={customerImage4} alt="Customer 2" className="customer-image" />
