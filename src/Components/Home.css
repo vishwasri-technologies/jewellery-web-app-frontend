@@ -653,13 +653,13 @@ body, html {
   .about-text p {
     font-size: 24px;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
     margin-left:-30%;
   }
 
  
 
-   /* Happy Customers Section */
+  /* Happy Customers Section */
 .happy-customers-section2 {
     margin-top: 1rem;
     text-align: center;
@@ -667,17 +667,36 @@ body, html {
     position: relative;
   }
   
-  /* Fix the heading position */
+  
+  /* Section Title */
   .happy-customers-section2 .section-title2 {
     position: relative;
     top: 20px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-   
     padding: 0.5rem 1rem;
-   
     border-radius: 8px;
+  }
+
+  .section-title2 {
+    font-size: 2rem;
+    color: #8d1983;
+    font-weight: bold;
+    margin-bottom:130px;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .section-title2:before,
+  .section-title2::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 2px;
+    background-color: black;
+    margin: 0 10px;
+    vertical-align: middle;
   }
   
   /* Customer Images Container */
@@ -685,72 +704,54 @@ body, html {
     display: flex;
     align-items: center; /* Align images vertically */
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    margin-top: 100px; /* Create space below the fixed heading */
+    margin-top: 50px; /* Adjust margin as needed */
     position: relative;
   }
   
-  /* First Image (Centerpiece) */
-  .customer-images img:nth-child(1) {
+  /* Single Customer Image */
+  .customer-images .customer-image {
     border-radius: 8px;
-    height: 350px;
-    width: 300px;
-    margin-left:-10%;
+    height: 350px; /* Adjust height as needed */
+    width: 800px; /* Adjust width as needed */
+    object-fit: cover;
     z-index: 2;
   }
   
-  /* Images on the Left (4th and 5th) */
-  .customer-images img:nth-child(4){
-    height: 200px;
-    width: 20px;
-    object-fit: cover;
-    
-    margin-left:-62%;
-    
-  }
-  .customer-images img:nth-child(5) {
-    height: 250px;
-    width: 200px;
-    object-fit: cover;
-  
-    margin-left:-75%;
-  }
-  
-  /* Specific styling for 4th image */
-  .customer-images img:nth-child(4) {
-    margin-right: 0.30px; /* Small gap between 4th and 5th */
-    width:80px;
-  }
-  
-  /* Specific styling for 5th image */
-  .customer-images img:nth-child(5) {
-    margin-left: 1px; /* Small gap between 4th and 5th */
-  }
-  
-  /* Images on the Right (2nd and 3rd) */
-  .customer-images img:nth-child(2),
-  .customer-images img:nth-child(3) {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
- 
-  }
-  
-  /* Specific styling for 2nd image */
-  .customer-images img:nth-child(2) {
-    margin-right: 1px; 
-    height:250px;
-  }
-  
-  /* Specific styling for 3rd image */
-  .customer-images img:nth-child(3) {
-    margin-left: 0.50px; /* Small gap between 2nd and 3rd */
-    height:200px;
-    width:80px;
-  }
+  /* Prevent horizontal overflow */
   body {
     overflow-x: hidden;
   }
+    
+  @media (max-width: 768px) {
+    .customer-images .customer-image {
+      width: 90%; /* 90% of the container width on smaller screens */
+    }
+  }
+  @media (max-width: 1200px) {
+    .customer-images .customer-image {
+      width: 100%; /* 90% of the container width on screens up to 1200px */
+    }
+  }
+  @media (max-width: 540px) {
+    .customer-images .customer-image {
+      width: 170%; /* 90% of the container width on screens up to 1200px */
+      height:150px;
+    }
+    .section-title2 {
+        font-size: 0.9rem;
+    }
+    .section-title2:before,
+  .section-title2::after {
+    width: 50px;
+  }
+  }
+  @media (max-width: 344px) {
+    .section-title2:before,
+    .section-title2::after{
+      width: 15%; /* 90% of the container width on screens up to 1200px */
+    }
+  }
+
 
 
 @media (min-width: 540px) {

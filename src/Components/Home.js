@@ -80,11 +80,7 @@ import giftImage1 from "../assets/Home/gift-1.png";
 import giftImage2 from "../assets/Home/gift-2.png";
 import About1 from "../assets/Home/About1.png";
 import About2 from "../assets/Home/About2.png";
-import customerImage3 from "../assets/Home/customerImage3.png";
-import customerImage4 from "../assets/Home/customerImage4.png";
-import customerImage5 from "../assets/Home/customerImage5.png";
-import customerImage1 from "../assets/Home/customerImage1.png";
-import customerImage2 from "../assets/Home/customerImage2.png";
+import customerImage from "../assets/Home/customerImage.png";
 
 
 const Home = () => {
@@ -203,17 +199,11 @@ const Home = () => {
 
 {/* CUSTOMER SECTION */}
 
-      <div className="happy-customers-section2">
-        <h2 className="section-title2">Happy Customers</h2>
-        <div className="customer-images">
-          <img src={customerImage3} alt="Customer 1" className="customer-image" />
-          <img src={customerImage4} alt="Customer 2" className="customer-image" />
-          <img src={customerImage5} alt="Customer 2" className="customer-image" />
-          <img src={customerImage1} alt="Customer 2" className="customer-image" />
-          <img src={customerImage2} alt="Customer 2" className="customer-image" />
-        </div>
+<div className="happy-customers-section2">
+      <h2 className="section-title2">Happy Customers</h2>
+      <div className="customer-images">
+        <img src={customerImage} alt="Happy Customer" className="customer-image" />
       </div>
-      <div>
         {/* <Footer/> */}
       </div>
 
