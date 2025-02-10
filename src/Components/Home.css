@@ -1082,7 +1082,20 @@ body, html {
     .customer-images .customer-image {
       width: 90%; /* 90% of the container width on smaller screens */
     }
+    .happy-customers-section2 {
+        margin-top:-10%;
+    }
   }
+  @media (max-width: 430px) {
+    .happy-customers-section2 {
+        margin-top:-100%;
+    }
+  }
+  @media (max-width: 540px) {
+    .happy-customers-section2 {
+        margin-top:-80%;
+    }
+}
   @media (max-width: 1200px) {
     .customer-images .customer-image {
       width: 100%; /* 90% of the container width on screens up to 1200px */
@@ -1106,19 +1119,19 @@ body, html {
     .section-title2::after{
       width: 15%; /* 90% of the container width on screens up to 1200px */
     }
+    .happy-customers-section2 {
+        margin-top:-80%;
+    }
   }
   
  
 
 
 
-
 @media (min-width: 540px) {
     .gift-text h2 {
         font-size: 20px;
-        margin-left: 32%;
-      
-     
+        margin-left: 32%; 
     }
 
     .gift-text p {
