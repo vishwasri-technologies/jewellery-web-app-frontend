@@ -1,6 +1,6 @@
 /* Container for the reset password page */
 .reset-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -59,13 +59,13 @@
     color: white;
     border: none;
     padding: 12px;
-    width: 50%;
+    width: 80%;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
     align-self: center;
     font-size: 16px;
-    margin-left: 80px;
+    margin-left: 25px;
     margin-top: 10px;
   }
   
@@ -97,7 +97,7 @@
   
   @media screen and (min-width: 1025px) {
     .reset-form {
-      width: 60%;
+      width: 75%;
       max-width: 500px;
       padding: 60px;
     }
@@ -105,7 +105,7 @@
 
   @media screen and (max-width: 480px) {
     .reset-form {
-      width: 60%;
+      width: 75%;
       max-width: 500px;
       padding: 40px;
       margin-top: -10%;

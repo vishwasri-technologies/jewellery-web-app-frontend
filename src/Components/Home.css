@@ -506,3 +506,173 @@ body, html {
     }
 }
 
+
+/* About Us Section */
+.about-us-section {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #8d1983;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 2px;
+    background-color: black;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+  }
+  
+  .about-image {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+  
+  }
+  .about-images {
+    display: flex;
+    gap: 1rem; /* Add spacing between images */
+    margin-left:10%;
+  }
+  
+  .about-images img:nth-child(1) {
+    margin-right: 20px; 
+  }
+  
+  .about-images img:nth-child(2) {
+    margin-left: 150px;
+  margin-top:-70px;
+  }
+  
+  
+  .about-text {
+    /* max-width: 70%; */
+    text-align: left;
+    color:black;
+   
+  }
+  
+  .about-text p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    margin-left:-30%;
+  }
+
+   /* Happy Customers Section */
+.happy-customers-section {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+  
+  /* Fix the heading position */
+  .happy-customers-section .section-title {
+    position: relative;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+   
+    padding: 0.5rem 1rem;
+   
+    border-radius: 8px;
+  }
+  
+  /* Customer Images Container */
+  .customer-images {
+    display: flex;
+    align-items: center; /* Align images vertically */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    margin-top: 100px; /* Create space below the fixed heading */
+    position: relative;
+  }
+  
+  /* First Image (Centerpiece) */
+  .customer-images img:nth-child(1) {
+    border-radius: 8px;
+    height: 350px;
+    width: 300px;
+    margin-left:-10%;
+z-index: 2;
+  }
+  
+  /* Images on the Left (4th and 5th) */
+  .customer-images img:nth-child(4){
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+    
+    margin-left:-62%;
+    
+  }
+  .customer-images img:nth-child(5) {
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+  
+    margin-left:-75%;
+  }
+  
+  /* Specific styling for 4th image */
+  .customer-images img:nth-child(4) {
+    margin-right: 1px; /* Small gap between 4th and 5th */
+  }
+  
+  /* Specific styling for 5th image */
+  .customer-images img:nth-child(5) {
+    margin-left: 1px; /* Small gap between 4th and 5th */
+  }
+  
+  /* Images on the Right (2nd and 3rd) */
+  .customer-images img:nth-child(2),
+  .customer-images img:nth-child(3) {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+ 
+  }
+  
+  /* Specific styling for 2nd image */
+  .customer-images img:nth-child(2) {
+    margin-right: 1px; 
+    height:250px;
+  }
+  
+  /* Specific styling for 3rd image */
+  .customer-images img:nth-child(3) {
+    margin-left: 1px; /* Small gap between 2nd and 3rd */
+    height:200px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  
