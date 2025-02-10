@@ -90,9 +90,6 @@ const products = [
     image: ee12,
   },
 ]
-<<<<<<< HEAD
-const EarRings = () => {
-=======
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
@@ -107,8 +104,6 @@ const EarRings = () => {
     (product) => product.name.toLowerCase().trim() === query?.toLowerCase().trim()
   );
   
-
->>>>>>> 097d1d3 (search for earrings, path change in app.js and navbar)
   return (
     <>
    <div>
