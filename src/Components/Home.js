@@ -187,16 +187,15 @@ const Home = () => {
           </div>
           <div className="about-text">
             <p>
-              At EternaJewels, we believe in celebrating life’s<br/> most cherished
-              moments with jewelry that tells<br/> your unique story. Our timeless designs
-              are<br/> crafted with precision, blending elegance with<br/> quality to create
-              pieces that last a lifetime.
-            </p>
+            At SriLaxmiBhagavan, we believe in celebrating <br/>life’s most cherished moments with jewelry that<br/>
+             tells your unique story. Our timeless designs are<br/> 
+             crafted with precision, blending elegance with<br/> quality to create pieces that last a lifetime.
+           </p>
             <p>
-              From dazzling rings and necklaces to intricate<br/> bracelets and earrings,
-              our collection<br/> embodies sophistication and grace. Whether <br/>you’re marking
-              a special occasion or simply<br/> indulging in beauty, EternaJewels offers<br/>
-              unmatched craftsmanship and designs that<br/> inspire.
+            From dazzling rings and necklaces to intricate <br/>
+            bracelets and earrings, our collection<br/>   embodies sophistication and grace. 
+            Whether<br/> you’re marking a special occasion or simply <br/>indulging in 
+            beauty, EternaJewels offers<br/>  unmatched craftsmanship and designs that inspire.
             </p>
           </div>
         </div>

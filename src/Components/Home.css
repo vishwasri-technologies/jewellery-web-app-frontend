@@ -638,22 +638,17 @@ body, html {
     gap: 1rem; /* Add spacing between images */
     margin-left:10%;
   }
-  
   .about-images img:nth-child(1) {
     margin-right: -10px; 
   }
-  
   .about-images img:nth-child(2) {
     margin-left: 120px;
   margin-top:-70px;
   }
-  
-  
   .about-text {
     /* max-width: 70%; */
     text-align: left;
     color:black;
-   
   }
   .about-text p {
     font-size: 24px;
@@ -662,14 +657,7 @@ body, html {
     margin-left:-30%;
   }
 
-  @media (max-width: 576px) {
-    .about-text {
-      text-align: right; /* Ensures right alignment */
-      width: 100%;
-      padding-right: 20px;
-      border: 1px solid red; /* 🔴 Border remains for small screens */
-    }
-  } 
+ 
 
    /* Happy Customers Section */
 .happy-customers-section2 {
@@ -763,8 +751,6 @@ body, html {
   body {
     overflow-x: hidden;
   }
-  
-  
 
 
 @media (min-width: 540px) {
