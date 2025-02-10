@@ -114,7 +114,7 @@ const Navbar = () => {
       <div className="navbar-container">
       
         <div className="logo">
-          <Link to="/">SriLaxmiBhagavan</Link>
+          <Link >SriLaxmiBhagavan</Link>
         </div>
 
       
