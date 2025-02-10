@@ -135,41 +135,42 @@ const products = [
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
-
 };
+
 
 const Necklace = () => {
   const query = useQuery().get("name"); // Get the product name from the URL
   const selectedProduct = products.find((product) => product.name === query);
 
-  return (
-    <div>
-    <div className="container">
-      <div className="grid-container">
-      {selectedProduct ? (
-          <div key={selectedProduct.id} className="grid-item">
-            <img src={selectedProduct.image} alt={selectedProduct.name} className="product-image" />
-            <div className="product-details">
-              <h3>{selectedProduct.name}</h3>
-              <p>{selectedProduct.price}</p>
+return (
+  <div>
+  <div className="necklace-wrapper">
+    <div className="necklace-grid">
+    {selectedProduct ? (
+        <div key={selectedProduct.id} className="necklace-card">
+          <img src={selectedProduct.image} alt={selectedProduct.name} className="necklace-img" />
+          <div className="necklace-info">
+            <h3>{selectedProduct.name}</h3>
+            <p>{selectedProduct.price}</p>
+          </div>
+        </div>
+      ) : (
+        products.map((product) => (
+          <div key={product.id} className="necklace-card">
+            <img src={product.image} alt={product.name} className="necklace-img" />
+            <div className="necklace-info">
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
             </div>
           </div>
-        ) : (
-          products.map((product) => (
-            <div key={product.id} className="grid-item">
-              <img src={product.image} alt={product.name} className="product-image" />
-              <div className="product-details">
-                <h3>{product.name}</h3>
-                <p>{product.price}</p>
-              </div>
-            </div>
-          ))
-        )}
-        </div>
-      </div>
-      <Footer />
+        ))
+      )}
     </div>
-  );
+  </div>
+  <Footer />
+  </div>
+);
 };
+
 
 export default Necklace;

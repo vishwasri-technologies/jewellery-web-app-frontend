@@ -1,5 +1,6 @@
 import React from "react";
 import "./EarRings.css";
+import { useLocation } from "react-router-dom";
  
 import ee1 from '../assets/EarRings/ee1.png';
 import ee2 from '../assets/EarRings/ee2.png';
@@ -89,26 +90,54 @@ const products = [
     image: ee12,
   },
 ]
+<<<<<<< HEAD
 const EarRings = () => {
+=======
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+const EarRings = () => {
+  const query = useQuery().get("name"); // Get product name from URL
+  console.log("Query from URL:", query); // Debugging log
+
+  // Ensure we match case-insensitively and trim spaces
+  const matchedProducts = products.filter(
+    (product) => product.name.toLowerCase().trim() === query?.toLowerCase().trim()
+  );
+  
+
+>>>>>>> 097d1d3 (search for earrings, path change in app.js and navbar)
   return (
     <>
    <div>
    <div>
   <div className="store-container">
     <div className="store-grid">
-      {products.map((product) => (
-        <div key={product.id} className="store-item">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="store-img"
-          />
-          <div className="store-info">
-            <h3>{product.name}</h3>
-            <p>{product.price}</p>
-          </div>
-        </div>
-      ))}
+    {matchedProducts.length > 0 ? (
+            matchedProducts.map((product) => (
+              <div key={product.id} className="store-item">
+                <img src={product.image} alt={product.name} className="store-img" />
+                <div className="store-info">
+                  <h3>{product.name}</h3>
+                  <p>{product.price}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            // If no search is made, show all products
+            products.map((product) => (
+              <div key={product.id} className="store-item">
+                <img src={product.image} alt={product.name} className="store-img" />
+                <div className="store-info">
+                  <h3>{product.name}</h3>
+                  <p>{product.price}</p>
+                </div>
+              </div>
+            ))
+          )}
+
     </div>
   </div>
 </div>

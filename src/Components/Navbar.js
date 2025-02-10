@@ -6,39 +6,61 @@ import "./Navbar.css";
 
 const products = [
   { id: 1, name: "Choker with Earrings", price: "₹1400", category: "Necklace"  },
-  { id: 2, name: "Temple Nacklace Set", price: "₹1400", category: "Necklace" },
+  { id: 2, name: "Temple Necklace Set", price: "₹1400", category: "Necklace" },
   { id: 3, name: "Stone-Studded Choker", price: "₹1400", category: "Necklace" },
-  { id: 4, name: "Cubic Zirconia Nacklace", price: "₹1400", category: "Necklace" },
+  { id: 4, name: "Cubic Zirconia Necklace", price: "₹1400", category: "Necklace" },
   { id: 5, name: "Gold & Pearl necklace set", price: "₹1400", category: "Necklace" },
   { id: 6, name: "Polki Choker", price: "₹1400",category: "Necklace"  },
-  { id: 7, name: "Antique Nacklace", price: "₹1400",category: "Necklace"  },
+  { id: 7, name: "Antique Necklace", price: "₹1400",category: "Necklace"  },
   { id: 8, name: "Red Kundan Necklace", price: "₹1400",category: "Necklace"  },
   { id: 9, name: "Pearl Necklace Set", price: "₹1400",category: "Necklace"  },
-  { id: 10, name: "Nacklaces Set", price: "₹1400",category: "Necklace"  },
+  { id: 10, name: "Necklaces Set", price: "₹1400",category: "Necklace"  },
   { id: 11, name: "Sofine Oxidised Plated Mirror Necklace Set", price: "₹1400",category: "Necklace"  },
-  { id: 12, name: "Long Nacklace Set", price: "₹1400",category: "Necklace"  },
+  { id: 12, name: "Long Necklace Set", price: "₹1400",category: "Necklace"  },
   { id: 13, name: "Haram", price: "₹1400",category: "Necklace"  },
   { id: 14, name: "Fancy Jewellery Set", price: "₹1400",category: "Necklace"  },
-  { id: 15, name: "Lakshmi & Peacock Motifs Nacklace Set", price: "₹1400",category: "Necklace"  },
+  { id: 15, name: "Lakshmi & Peacock Motifs Necklace Set", price: "₹1400",category: "Necklace"  },
   { id: 16, name: "Temple Haram", price: "₹1400",category: "Necklace"  },
-  { id: 17, name: "Lakshmi Nacklace Set", price: "₹1400",category: "Necklace"  },
+  { id: 17, name: "Lakshmi Necklace Set", price: "₹1400",category: "Necklace"  },
   { id: 18, name: "Lakshmi Haram", price: "₹1400",category: "Necklace"  },
 
-  { id: 1, name: "Kundan Chain", price: "₹1400", category: "chains" },
+  { id: 1, name: "Kundan Chain", price: "₹1400", category: "earrings-rings" },
   { id: 2, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
   { id: 3, name: "Antique Long Lakshmi Chain", price: "₹1400", category: "chains" },
   { id: 4, name: "Classic Gold-Plated Chain", price: "₹1400", category: "chains" },
   { id: 5, name: "Peacock Motifs", price: "₹1400", category: "chains" },
   { id: 6, name: "Ramdev Pendant", price: "₹1400", category: "chains" },
   { id: 7, name: "White Kundan Chain", price: "₹1400", category: "chains" },
-  { id: 8, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
   { id: 9, name: "Antique Lakshmi Gold Chain", price: "₹1400", category: "chains" },
   { id: 10, name: "Rani Haram", price: "₹1400", category: "chains" },
   { id: 11, name: "Black Kundan Chain", price: "₹1400", category: "chains" },
   { id: 12, name: "Ramdev Pendant Chain", price: "₹1400", category: "chains" },
-  { id: 13, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
   { id: 14, name: "Short Chain", price: "₹1400", category: "chains" },
-  { id: 15, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
+  
+
+  { id: 1, name: "Golden Stone Bangles", price: "₹1400", category: "Bangles" },
+  { id: 2, name: "Gold Bangles", price: "₹1400", category: "Bangles" },
+  { id: 3, name: "Jadau Bangle", price: "₹1400", category: "Bangles" },
+  { id: 4, name: "White Stone Bangle", price: "₹1400", category: "Bangles" },
+  { id: 5, name: "Crystal Bangles", price: "₹1400", category: "Bangles" },
+  { id: 6, name: "Grey Rose & Gold Bangle Set", price: "₹1400", category: "Bangles" },
+  { id: 7, name: "CZ Bangles", price: "₹1400", category: "Bangles" },
+  { id: 8, name: "Diamond Bangle Set", price: "₹1400", category: "Bangles" },
+  { id: 9, name: "Stone Bangles", price: "₹1400", category: "Bangles" },
+
+  { id: 1, name: "White Kundan Jhumka", price: "₹1400", category: "EarRings" },
+  { id: 2, name: "Multicolour Jhumka Earrings", price: "₹1400", category: "EarRings" },
+  { id: 3, name: "Red and Green Stone CZ Earrings", price: "₹1400", category: "EarRings" },
+  { id: 5, name: "Kundan Earring", price: "₹1400", category: "EarRings" },
+  { id: 6, name: "Black Jhumka Earrings", price: "₹1400", category: "EarRings" },
+  { id: 7, name: "Gold Plated Rings", price: "₹1400", category: "EarRings" },
+  { id: 9, name: "Diamond & Gold Passion Ring", price: "₹1400", category: "EarRings" },
+  { id: 10, name: "Princess Ring", price: "₹1400", category: "EarRings" },
+  { id: 11, name: "Diamond & Gold Passion Ring", price: "₹1400", category: "EarRings" },
+  { id: 12, name: "Multi Stone Ring", price: "₹1400", category: "EarRings" },
+
+
+
 
   
 ];
@@ -127,7 +149,7 @@ const Navbar = () => {
         <Link to="/all">All</Link>
         <Link to="/necklace">Necklace</Link>
         <Link to="/chains">Chains</Link>
-        <Link to="/earrings-rings">EarRings & Rings</Link>
+        <Link to="/earrings">EarRings & Rings</Link>
         <Link to="/bangles">Bangles</Link>
       </div>
     </nav>

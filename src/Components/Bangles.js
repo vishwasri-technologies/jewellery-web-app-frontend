@@ -1,5 +1,7 @@
 import React from "react";
 import "./Bangles.css";
+import { useLocation } from "react-router-dom";
+
 import B1 from "../assets/Bangles/B1.png"; 
 import B2 from "../assets/Bangles/B2.png";
 import B3 from "../assets/Bangles/B3.png";
@@ -68,12 +70,20 @@ const products = [
   },
 ];
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+
 const Bangles = () => {
+  const query = useQuery().get("name"); // Get the product name from the URL
+  const selectedProduct = products.find((product) => product.name === query);
+  
   return (
     <div>
       <div className="bangles-wrapper">
         <div className="bangles-grid">
-          {products.map((product) => (
+          {/* {products.map((product) => (
             <div key={product.id} className="bangle-card">
               <img src={product.image} alt={product.name} className="bangle-img" />
               <div className="bangle-info">
@@ -81,7 +91,26 @@ const Bangles = () => {
                 <p>{product.price}</p>
               </div>
             </div>
-          ))}
+          ))} */}
+          {selectedProduct ? (
+        <div key={selectedProduct.id} className="bangle-card">
+          <img src={selectedProduct.image} alt={selectedProduct.name} className="bangle-img" />
+          <div className="bangle-info">
+            <h3>{selectedProduct.name}</h3>
+            <p>{selectedProduct.price}</p>
+          </div>
+        </div>
+      ) : (
+        products.map((product) => (
+          <div key={product.id} className="bangle-card">
+            <img src={product.image} alt={product.name} className="bangle-img" />
+            <div className="bangle-info">
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </div>
+          </div>
+        ))
+      )}
         </div>
       </div>
       <Footer />
