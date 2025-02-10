@@ -584,6 +584,43 @@ body, html {
     }
 }
 
+@media (min-width: 768px) and (max-width:1024px){
+    .gift-text h2 {
+        font-size: 38px;
+        margin-left: 32%;
+      
+     
+    }
+
+    .gift-text p {
+        font-size: 22px;
+        margin-left: 32%;
+       
+    }
+
+    .gift-link {
+        font-size: 22px;
+        margin-left: 32%;
+    }
+
+    .top-img {
+        width: 450px;
+        height: 270px;
+    /* margin-left: -130%; */
+    transform: translate(-170px);
+      
+    }
+    .bottom-img{
+        width: 230px;
+        height: 250px;
+        /* margin-top:-130%;
+        position: relative; */
+        left:30%;
+        top:10%;
+
+    }
+}
+
 
 
 /* About Us Section */
