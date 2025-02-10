@@ -41,10 +41,16 @@ const Login = () => {
     }
     try {
       const res = await axios.post("http://localhost:5000/Login", formData);
-      setMessage(res.data.message);
-      alert("Login successful!");
+      if (res.status === 200) {
+        localStorage.setItem("userEmail", formData.email); // Store email in localStorage
+        setMessage("Login successful!");
+        alert("Login successful!");
+        navigate("/");
+      } else {
+        throw new Error(res.data.message || "Invalid credentials");
+      }
     } catch (error) {
-      setMessage(error.response?.data?.message || "Error occurred");
+      setMessage(error.response?.data?.message || "Invalid email or password");
       alert("Login failed! Please check your credentials.");
     }
   };
@@ -56,9 +62,12 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input type="email" id="email" placeholder="" value={formData.email} onChange={handleChange}/>
+          {errors.email && <p className="error">{errors.email}</p>}
+
 
           <label htmlFor="password">Password</label>
           <input type="password" id="password" placeholder="" value={formData.password} onChange={handleChange}/>
+          {errors.password && <p className="error">{errors.password}</p>}
 
           <div className="login-reset-password-container">
             <label htmlFor="reset-checkbox" className="login-reset-password" onClick={() => navigate("/reset")}>
@@ -66,10 +75,12 @@ const Login = () => {
             </label>
           </div>
 
-          <button onClick={() => navigate("/")} type="submit" className="login-button">
+          <button  type="submit" className="login-button">
             Login
           </button>
         </form>
+
+        {message && <p>{message}</p>}
         <p>
           Don't have an account? <Link to="/signup">Sign Up</Link>
         </p>

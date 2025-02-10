@@ -25,60 +25,44 @@
 // export default Reset;
 
 
-
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // For redirection
+import axios from "axios";
 import "./Reset.css";
 
 const Reset = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const navigate = useNavigate();
+  const [message, setMessage] = useState(""); // To display success/error messages
+  const navigate = useNavigate(); // To redirect after success
 
-  const validatePassword = (password) => {
-    return password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password);
-  };
-
-  const handleSubmit = async (e) => {
+  const handleReset = async (e) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
 
-    if (!newPassword || !confirmPassword) {
-      setError("All fields are required");
-      return;
-    }
-
-    if (!validatePassword(newPassword)) {
-      setError("Password must be at least 8 characters long, contain at least one uppercase letter and one number");
-      return;
-    }
-
-    if (newPassword !== confirmPassword) {
-      setError("Passwords do not match");
+    // Get token from localStorage
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setMessage("Unauthorized! Please log in first.");
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:5000/Reset", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ newPassword, confirmPassword }),
-      });
-      
-      const data = await response.json();
-      if (response.ok) {
-        setSuccess("Password reset successful");
-        setTimeout(() => navigate("/login"), 2000); // Redirect to login after success
-      } else {
-        setError(data.message);
-      }
+      const response = await axios.post(
+        "http://localhost:5000/Reset",
+        { newPassword, confirmPassword },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Attach token for authentication
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      // If successful, show success message and redirect
+      setMessage(response.data.message);
+      setTimeout(() => navigate("/login"), 2000); // Redirect to login page
     } catch (error) {
-      setError("Failed to reset password. Please try again.");
+      setMessage(error.response?.data?.message || "Error updating password");
     }
   };
 
@@ -86,28 +70,29 @@ const Reset = () => {
     <div className="reset-container">
       <div className="reset-form">
         <h2>Reset Password</h2>
-        {error && <p className="error-message">{error}</p>}
-        {success && <p className="success-message">{success}</p>}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="new-password">New Password</label>
+        {message && <p className="message">{message}</p>} {/* Show success/error messages */}
+        <form onSubmit={handleReset}>
+          <label htmlFor="newPassword">New Password</label>
           <input
             type="password"
-            id="new-password"
-            placeholder="Enter new password"
+            id="newPassword"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+            required
           />
 
-          <label htmlFor="confirm-password">Confirm Password</label>
+          <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="password"
-            id="confirm-password"
-            placeholder="Confirm new password"
+            id="confirmPassword"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            required
           />
-    
-          <button type="submit" className="save-button">Save Password</button>
+
+          <button type="submit" className="save-button">
+            Save Password
+          </button>
         </form>
       </div>
     </div>
@@ -115,4 +100,3 @@ const Reset = () => {
 };
 
 export default Reset;
-
