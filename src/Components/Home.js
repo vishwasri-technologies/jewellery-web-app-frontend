@@ -81,6 +81,7 @@ import giftImage2 from "../assets/Home/gift-2.png";
 import About1 from "../assets/Home/About1.png";
 import About2 from "../assets/Home/About2.png";
 import customerImage from "../assets/Home/customerImage.png";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -204,8 +205,11 @@ const Home = () => {
       <div className="customer-images">
         <img src={customerImage} alt="Happy Customer" className="customer-image" />
       </div>
-        {/* <Footer/> */}
+     
       </div>
+      <>
+        <Footer/>
+        </>
 
     </div>
     

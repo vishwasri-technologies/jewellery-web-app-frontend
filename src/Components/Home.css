@@ -910,7 +910,7 @@ body, html {
 .about-us-section {
     margin-top: 3rem;
     text-align: center;
-    /* padding: 3rem 2rem; */
+    padding: 3rem 2rem;
     /* background-color: #f9f9f9; */
     border-radius: 8px;
   }
@@ -919,8 +919,8 @@ body, html {
     font-size: 1.5rem;
     color: #8d1983;
     font-weight: bold;
-    /* margin-bottom: 2rem; */
-    /* position: relative; */
+    margin-bottom: 2rem;
+    position: relative;
   }
   
   .section-title1::before,
@@ -1262,55 +1262,10 @@ body, html {
   }
   
 
-  /* Images on the Left (4th and 5th) */
-  .customer-images img:nth-child(4){
-    height: 200px;
-    width: 20px;
-    object-fit: cover;
-    
-    margin-left:-62%;
-    
-  }
-  .customer-images img:nth-child(5) {
-    height: 250px;
-    width: 200px;
-    object-fit: cover;
-  
-    margin-left:-75%;
-  }
-  
-  /* Specific styling for 4th image */
-  .customer-images img:nth-child(4) {
-    margin-right: 0.30px; /* Small gap between 4th and 5th */
-    width:80px;
-  }
-  
-  /* Specific styling for 5th image */
-  .customer-images img:nth-child(5) {
-    margin-left: 1px; /* Small gap between 4th and 5th */
-  }
-  
-  /* Images on the Right (2nd and 3rd) */
-  .customer-images img:nth-child(2),
-  .customer-images img:nth-child(3) {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
  
-  }
+ 
   
-  /* Specific styling for 2nd image */
-  .customer-images img:nth-child(2) {
-    margin-right: 1px; 
-    height:250px;
-  }
   
-  /* Specific styling for 3rd image */
-  .customer-images img:nth-child(3) {
-    margin-left: 0.50px; /* Small gap between 2nd and 3rd */
-    height:200px;
-    width:80px;
-  }
     
   
 
