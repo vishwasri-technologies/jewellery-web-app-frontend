@@ -22,17 +22,6 @@ const Signup = () => {
 
           <label htmlFor="password" >Password</label>
           <input type="password" id="password" placeholder="" className="signup-label"/>
-            {/* <div className="reset-password-container1">
-\
-              <input type="checkbox" id="reset-checkbox" />
-              <label htmlFor="reset-checkbox" className="reset-password1">
-                Reset&nbsp;&nbsp;Password
-              </label>
-<<<<<<< HEAD
-            </div>
-=======
-            </div> */}
-
 
           <button type="submit" className="signup-button">
             Sign Up
@@ -40,13 +29,9 @@ const Signup = () => {
         </form>
 
         <p>
-          Already have an account? <Link to="/login">Login</Link> {/* Use Link to navigate */}
+          Already have an account? <Link to="/login">Login</Link> 
         </p>
 
-        {/* <div className="social-icons1">
-          <img src={google} alt="Google" />
-          <img src={facebook} alt="Facebook" />
-        </div> */}
       </div>
     </div>
   );
