@@ -561,11 +561,11 @@ body, html {
   }
   
   .about-images img:nth-child(1) {
-    margin-right: 20px; 
+    margin-right: -10px; 
   }
   
   .about-images img:nth-child(2) {
-    margin-left: 150px;
+    margin-left: 120px;
   margin-top:-70px;
   }
   
@@ -576,13 +576,21 @@ body, html {
     color:black;
    
   }
-  
   .about-text p {
     font-size: 24px;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     margin-left:-30%;
   }
+
+  @media (max-width: 576px) {
+    .about-text {
+      text-align: right; /* Ensures right alignment */
+      width: 100%;
+      padding-right: 20px;
+      border: 1px solid red; /* 🔴 Border remains for small screens */
+    }
+  } 
 
    /* Happy Customers Section */
 .happy-customers-section {
@@ -627,7 +635,7 @@ z-index: 2;
   /* Images on the Left (4th and 5th) */
   .customer-images img:nth-child(4){
     height: 200px;
-    width: 150px;
+    width: 20px;
     object-fit: cover;
     
     margin-left:-62%;
@@ -643,7 +651,8 @@ z-index: 2;
   
   /* Specific styling for 4th image */
   .customer-images img:nth-child(4) {
-    margin-right: 1px; /* Small gap between 4th and 5th */
+    margin-right: 0.30px; /* Small gap between 4th and 5th */
+    width:80px;
   }
   
   /* Specific styling for 5th image */
@@ -668,8 +677,9 @@ z-index: 2;
   
   /* Specific styling for 3rd image */
   .customer-images img:nth-child(3) {
-    margin-left: 1px; /* Small gap between 2nd and 3rd */
+    margin-left: 0.50px; /* Small gap between 2nd and 3rd */
     height:200px;
+    width:80px;
   }
   body {
     overflow-x: hidden;
