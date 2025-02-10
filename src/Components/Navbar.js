@@ -24,7 +24,7 @@ const products = [
   { id: 17, name: "Lakshmi Necklace Set", price: "₹1400",category: "Necklace"  },
   { id: 18, name: "Lakshmi Haram", price: "₹1400",category: "Necklace"  },
 
-  { id: 1, name: "Kundan Chain", price: "₹1400", category: "earrings-rings" },
+  { id: 1, name: "Kundan Chain", price: "₹1400", category: "chains" },
   { id: 2, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
   { id: 3, name: "Antique Long Lakshmi Chain", price: "₹1400", category: "chains" },
   { id: 4, name: "Classic Gold-Plated Chain", price: "₹1400", category: "chains" },
