@@ -830,6 +830,7 @@ body, html {
     font-size: 1.5rem;
     color: #8d1983;
     font-weight: bold;
+    /* margin-top: 20%; */
     /* margin-bottom: 2rem; */
     /* position: relative; */
   }
@@ -910,7 +911,7 @@ body, html {
 .about-us-section {
     margin-top: 3rem;
     text-align: center;
-    padding: 3rem 2rem;
+    /* padding: 3rem 2rem; */
     /* background-color: #f9f9f9; */
     border-radius: 8px;
   }
@@ -919,8 +920,9 @@ body, html {
     font-size: 1.5rem;
     color: #8d1983;
     font-weight: bold;
-    margin-bottom: 2rem;
-    position: relative;
+    /* margin-bottom: 2rem; */
+    /* position: relative; */
+    margin-top: -110px !important;
   }
   
   .section-title1::before,
@@ -930,7 +932,7 @@ body, html {
     width: 80px;
     height: 2px;
     background-color: black;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     /* vertical-align: middle; */
   }
   
@@ -950,15 +952,15 @@ body, html {
   }
   
   .about-image {
-    width: 250px;
-    height: 200px;
+    width: 350px;
+    height: 230px;
     object-fit: cover;
   
   }
   .about-images {
     /* display: flex; */
-    margin-top: 30%;
-    margin-left: 1%;
+    margin-top: 40%;
+    margin-left: 15%;
    
     /* margin-left:10%; */
   }
@@ -979,7 +981,7 @@ body, html {
     /* text-align: left; */
     color:black;
     margin-bottom: -90%;
-    margin-left: 12%;
+   transform: translate(-40%);
    
   }
   .about-text p {
