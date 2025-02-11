@@ -26,43 +26,33 @@
 
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // For redirection
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Reset.css";
 
 const Reset = () => {
+  const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState(""); // To display success/error messages
-  const navigate = useNavigate(); // To redirect after success
+  const [message, setMessage] = useState("");
 
   const handleReset = async (e) => {
     e.preventDefault();
 
-    // Get token from localStorage
-    const token = localStorage.getItem("token");
-    if (!token) {
-      setMessage("Unauthorized! Please log in first.");
+    if (newPassword !== confirmPassword) {
+      setMessage("Passwords do not match.");
       return;
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/Reset",
-        { newPassword, confirmPassword },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // Attach token for authentication
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("http://localhost:5000/Reset", {
+        email,
+        newPassword,
+      });
 
-      // If successful, show success message and redirect
       setMessage(response.data.message);
-      setTimeout(() => navigate("/login"), 2000); // Redirect to login page
     } catch (error) {
-      setMessage(error.response?.data?.message || "Error updating password");
+      setMessage(error.response?.data?.message || "Something went wrong.");
     }
   };
 
@@ -70,12 +60,23 @@ const Reset = () => {
     <div className="reset-container">
       <div className="reset-form">
         <h2>Reset Password</h2>
-        {message && <p className="message">{message}</p>} {/* Show success/error messages */}
+        {message && <p className="message">{message}</p>}
         <form onSubmit={handleReset}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
           <label htmlFor="newPassword">New Password</label>
           <input
             type="password"
             id="newPassword"
+            placeholder="Enter new password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             required
@@ -85,6 +86,7 @@ const Reset = () => {
           <input
             type="password"
             id="confirmPassword"
+            placeholder="Confirm new password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
