@@ -1,5 +1,4 @@
-
-.chains-container {
+.chains-wrapper {
   width: 90%;
   margin: auto;
   padding: 4%;
@@ -7,23 +6,23 @@
 
 .chains-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 50px;
 }
 
-.chains-item {
+.chains-card {
   background-color: #fff;
   border-radius: 3%;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .chains-img {
   width: 100%;
-  aspect-ratio: 1 / 1; 
-  object-fit: contain; 
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .chains-info {
@@ -35,30 +34,30 @@ h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 1.5% 0 1.5% 0;
-  text-align: left; 
+  text-align: left;
 }
 
 p {
   font-size: 1rem;
-  color: black;
-  text-align: left; 
+  color: #333;
+  text-align: left;
   margin-top: 0;
 }
 
 @media (max-width: 1024px) {
   .chains-grid {
-    padding-top: 2%;
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+      padding-top: 2%;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .chains-grid {
-    padding-top: 2%;
-    gap: 25px;
-    grid-template-columns: repeat(2, 1fr); 
+      padding-top: 2%;
+      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
   }
   h3 {
-    font-size: 1rem; 
+      font-size: 1rem;
   }
 }

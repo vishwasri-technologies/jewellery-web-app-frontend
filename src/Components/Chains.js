@@ -18,6 +18,7 @@ import image502 from '../assets/Chains/image502.png';
 import image501 from '../assets/Chains/image501.png';
 import image500 from '../assets/Chains/image500.png';
 import "./Chains.css";
+
 const products =[
   {
     id: 1,
@@ -111,64 +112,48 @@ const products =[
   },
 ]
 
+
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
 
+
 const Chains = () => {
-  const query = useQuery().get("name"); // Get product name from URL
-  console.log("Query from URL:", query); // Debugging log
-
-  // Ensure we match case-insensitively and trim spaces
-  const matchedProducts = products.filter(
-    (product) => product.name.toLowerCase().trim() === query?.toLowerCase().trim()
-  );
-
+  const query = useQuery().get("name"); // Get the product name from the URL
+  const selectedProduct = products.find((product) => product.name === query);
+  
   return (
     <div>
-      <div className="chains-container">
+      <div className="chains-wrapper">
         <div className="chains-grid">
-            {/* {selectedProduct ? (
-          <div key={selectedProduct.id} className="grid-item">
-            <img src={selectedProduct.image} alt={selectedProduct.name} className="product-image" />
-            <div className="product-details">
-              <h3>{selectedProduct.name}</h3>
-              <p>{selectedProduct.price}</p>
-            </div>
-          </div>
-        ) : (
-          products.map((product) => (
-            <div key={product.id} className="chains-item">
-              <img src={product.image} alt={product.name} className="chains-image" />
-              <div className="chains-info">
+          {/* {products.map((product) => (
+            <div key={product.id} className="bangle-card">
+              <img src={product.image} alt={product.name} className="bangle-img" />
+              <div className="bangle-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
               </div>
             </div>
-          ))
-        )} */}
-        {matchedProducts.length > 0 ? (
-            matchedProducts.map((product) => (
-              <div key={product.id} className="grid-item">
-                <img src={product.image} alt={product.name} className="product-img" />
-                <div className="product-details">
-                  <h3>{product.name}</h3>
-                  <p>{product.price}</p>
-                </div>
-              </div>
-            ))
-          ) : (
-            // If no search is made, show all products
-            products.map((product) => (
-              <div key={product.id} className="chains-item">
-                <img src={product.image} alt={product.name} className="chains-image" />
-                <div className="chains-info">
-                  <h3>{product.name}</h3>
-                  <p>{product.price}</p>
-                </div>
-              </div>
-            ))
-          )}
+          ))} */}
+          {selectedProduct ? (
+        <div key={selectedProduct.id} className="chains-card">
+          <img src={selectedProduct.image} alt={selectedProduct.name} className="chains-img" />
+          <div className="chains-info">
+            <h3>{selectedProduct.name}</h3>
+            <p>{selectedProduct.price}</p>
+          </div>
+        </div>
+      ) : (
+        products.map((product) => (
+          <div key={product.id} className="chains-card">
+            <img src={product.image} alt={product.name} className="chains-img" />
+            <div className="chains-info">
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </div>
+          </div>
+        ))
+      )}
         </div>
       </div>
       <Footer />
