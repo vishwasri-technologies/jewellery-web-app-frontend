@@ -40,7 +40,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/Login", formData);
+      const res = await axios.post("https://jewellery-web-backend-users.vishcom.net/Login", formData);
       if (res.status === 200) {
         localStorage.setItem("userEmail", formData.email); // Store email in localStorage
         setMessage("Login successful!");

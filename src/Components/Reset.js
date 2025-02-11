@@ -45,11 +45,10 @@ const Reset = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/Reset", {
+      const response = await axios.post("https://jewellery-web-backend-users.vishcom.net/Reset", {
         email,
         newPassword,
       });
-
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response?.data?.message || "Something went wrong.");

@@ -53,7 +53,7 @@ const Signup = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/Signup", formData);
+      const res = await axios.post("https://jewellery-web-backend-users.vishcom.net/Signup", formData);
       setMessage(res.data.message);
       alert("Signup successful!");
     } catch (error) {
