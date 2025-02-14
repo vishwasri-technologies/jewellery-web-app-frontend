@@ -36,7 +36,7 @@ const Footer = () => {
             </li>
        
             <li>
-              <Link to="/earrings-rings" onClick={scrollToTop}>
+              <Link to="/earrings" onClick={scrollToTop}>
                 Ear Rings
               </Link>
             </li>
