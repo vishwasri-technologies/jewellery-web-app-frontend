@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { FaSearch,FaUser } from "react-icons/fa";
+import { FaSearch} from "react-icons/fa";
 import "./Navbar.css";
+import userIcon from '../assets/Logout.png';
+
 
 const products = [
   { id: 1, name: "Choker with Earrings", price: "₹1400", category: "Necklace"  },
@@ -124,7 +126,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="user-menu">
-  <Link to="/signup" >
+  <Link to="/logout" >
     <img src={userIcon} alt="User Icon" className="user-icon" />
    
   </Link>

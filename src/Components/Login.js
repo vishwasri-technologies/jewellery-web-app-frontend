@@ -45,7 +45,7 @@ const Login = () => {
         localStorage.setItem("userEmail", formData.email); // Store email in localStorage
         setMessage("Login successful!");
         alert("Login successful!");
-        navigate("/");
+        navigate("/home");
       } else {
         throw new Error(res.data.message || "Invalid credentials");
       }
