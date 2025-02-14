@@ -9,7 +9,6 @@
   overflow: hidden;
   padding: 20px;
 }
-
 .signup-container1::before {
   content: "";
   position: absolute;
@@ -25,7 +24,6 @@
   z-index: -1;
   filter: brightness(0.65);
 }
-
 .signup-form1 {
   background-color: #fff;
   padding: 40px;
@@ -34,7 +32,6 @@
   text-align: left;
   width: 350px;
 }
-
 .signup-form1 h2 {
   margin-bottom: 20px;
   color: #333;
@@ -120,18 +117,20 @@
 
 /* Media Query for Mobile */
 @media (max-width: 480px) {
-  .signup-container1 {
-    padding: 5%;
-  }
+
 
   .signup-form1 {
     width: 100%;
-    padding: 10%;
-    border-radius: 0;
+    /* padding: 10%; */
+  
     box-shadow: none;
-    margin: 8%;
-    border-radius:4%;
-    margin-left: -1%;
+    /* margin: 8%; */
+    border-radius:2%;
+    /* margin-left: -1%; */
+    /* margin: 10%; */
+    margin-right: 18%;
+    text-align: left;
+    padding-left:5%;
   }
 
   .signup-form1 h2 {

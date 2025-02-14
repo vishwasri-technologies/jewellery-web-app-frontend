@@ -45,29 +45,27 @@ const Footer = () => {
                 Bangles
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/earrings-rings" onClick={scrollToTop}>
                 Rings
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
         {/* Customer Support */}
         <div className="footer-section support">
-          <h4>Customer Support</h4>
-          <ul>
-            <li><a href="#">Return & Exchange</a></li>
-            <li><a href="#">Shipping Information</a></li>
-            <li><a href="#">Track your Order</a></li>
-          </ul>
+          <h4>Address</h4>
+     <p>Opp Girls High School,</p>
         </div>
 
         {/* Reach Us */}
         <div className="footer-section reach">
           <h4>Reach Us</h4>
-          <p> 81790 91444</p>
-          <p> nallapuswapna4@gmail.com</p>
+          <p><a href="tel:+918179091444">81790 91444</a></p>
+          <p>
+            <a href="mailto:nallapuswapna4@gmail.com">nallapuswapna4@gmail.com</a>
+          </p>
         </div>
       </div>
     </footer>

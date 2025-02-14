@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaSearch} from "react-icons/fa";
-import "./Navbar.css";
-import userIcon from "../assets/Logout.png";
 
+import { FaSearch,FaUser } from "react-icons/fa";
+import "./Navbar.css";
 
 const products = [
   { id: 1, name: "Choker with Earrings", price: "₹1400", category: "Necklace"  },
@@ -24,7 +23,6 @@ const products = [
   { id: 16, name: "Temple Haram", price: "₹1400",category: "Necklace"  },
   { id: 17, name: "Lakshmi Necklace Set", price: "₹1400",category: "Necklace"  },
   { id: 18, name: "Lakshmi Haram", price: "₹1400",category: "Necklace"  },
-
   { id: 1, name: "Kundan Chain", price: "₹1400", category: "chains" },
   { id: 2, name: "Short Chain with Pendant", price: "₹1400", category: "chains" },
   { id: 3, name: "Antique Long Lakshmi Chain", price: "₹1400", category: "chains" },
@@ -37,8 +35,6 @@ const products = [
   { id: 11, name: "Black Kundan Chain", price: "₹1400", category: "chains" },
   { id: 12, name: "Ramdev Pendant Chain", price: "₹1400", category: "chains" },
   { id: 14, name: "Short Chain", price: "₹1400", category: "chains" },
-  
-
   { id: 1, name: "Golden Stone Bangles", price: "₹1400", category: "Bangles" },
   { id: 2, name: "Gold Bangles", price: "₹1400", category: "Bangles" },
   { id: 3, name: "Jadau Bangle", price: "₹1400", category: "Bangles" },
@@ -48,7 +44,6 @@ const products = [
   { id: 7, name: "CZ Bangles", price: "₹1400", category: "Bangles" },
   { id: 8, name: "Diamond Bangle Set", price: "₹1400", category: "Bangles" },
   { id: 9, name: "Stone Bangles", price: "₹1400", category: "Bangles" },
-
   { id: 1, name: "White Kundan Jhumka", price: "₹1400", category: "EarRings" },
   { id: 2, name: "Multicolour Jhumka Earrings", price: "₹1400", category: "EarRings" },
   { id: 3, name: "Red and Green Stone CZ Earrings", price: "₹1400", category: "EarRings" },
@@ -58,12 +53,7 @@ const products = [
   { id: 9, name: "Diamond & Gold Passion Ring", price: "₹1400", category: "EarRings" },
   { id: 10, name: "Princess Ring", price: "₹1400", category: "EarRings" },
   { id: 11, name: "Diamond & Gold Passion Ring", price: "₹1400", category: "EarRings" },
-  { id: 12, name: "Multi Stone Ring", price: "₹1400", category: "EarRings" },
-
-
-
-
-  
+  { id: 12, name: "Multi Stone Ring", price: "₹1400", category: "EarRings" },  
 ];
 
 const Navbar = () => {
@@ -76,7 +66,6 @@ const Navbar = () => {
   const handleSearchInputChange = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-
     // Filter products based on input
     if (query.trim()) {
       const filtered = products.filter((product) =>
@@ -117,8 +106,6 @@ const Navbar = () => {
         <div className="logo">
           <Link >SriLaxmiBhagavan</Link>
         </div>
-
-      
         <div className="search-container">
           <input type="text" placeholder="Search jewellery" value={searchQuery}
             onChange={handleSearchInputChange}
@@ -136,8 +123,6 @@ const Navbar = () => {
             </ul>
           )}
         </div>
-
-      
         <div className="user-menu">
   <Link to="/signup" >
     <img src={userIcon} alt="User Icon" className="user-icon" />
@@ -145,16 +130,17 @@ const Navbar = () => {
   </Link>
 </div>
       </div>
-
       <div className="nav-links">
+        <Link to='/home'>Home</Link>
         <Link to="/all">All</Link>
         <Link to="/necklace">Necklace</Link>
         <Link to="/chains">Chains</Link>
-        <Link to="/earrings">EarRings</Link>
+
+        <Link to="/earrings">Earrings</Link>
+
         <Link to="/bangles">Bangles</Link>
       </div>
     </nav>
   );
 };
-
 export default Navbar;

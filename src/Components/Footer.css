@@ -57,7 +57,7 @@
   .footer-container {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      text-align: center;
+      text-align: left;
   }
 
   .footer-section {
@@ -65,24 +65,24 @@
   }
 }
 
-/* Mobile View - Stacked */
+
 @media (max-width: 768px) {
   .footer {
-      padding: 70px 10px;
+ 
       text-align: left;
       display: flex;
       flex-direction: row;
   }
 
-  .footer-container {
-      grid-template-columns: 1fr;
+  /* .footer-container {
+      /* grid-template-columns: 1fr; */
       
-  }
+  
 
   .footer-section {
       text-align: left;
       min-width: 100%;
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
   }
 
   .footer-section h4 {

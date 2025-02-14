@@ -12,6 +12,7 @@ import Logout from "./Components/Logout.js";
 import Login from "./Components/Login.js";
 import Reset from "./Components/Reset.js";
 
+
 const App = () => {
   return (
     <Router>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Reset" element={<Reset />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

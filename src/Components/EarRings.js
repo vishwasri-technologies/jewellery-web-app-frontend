@@ -91,6 +91,43 @@ const products = [
   },
 ]
 
+// const details=[ {
+//   id: 1,
+//   name: "Gold Plated Rings",
+//   price: "₹99",
+//   image: ee7,
+// },
+// {
+//   id: 2,
+//   name: "Gold Plated Rings",
+//   price: "₹99",
+//   image: ee8,
+// },
+// {
+//   id: 3,
+//   name: "Diamond & Gold Passion Ring",
+//   price: "₹99",
+//   image: ee9,
+// },
+// {
+//   id: 4,
+//   name: "Princess Ring",
+//   price: "₹119",
+//   image: ee10,
+// },
+// {
+//   id: 5,
+//   name: "Diamond & Gold Passion Ring",
+//   price: "₹149",
+//   image: ee11,
+// },
+// {
+//   id: 6,
+//   name: "Multi Stone Ring",
+//   price: "₹119",
+//   image: ee12,
+// },]
+
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
