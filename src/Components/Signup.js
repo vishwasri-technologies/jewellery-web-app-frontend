@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import axios from "axios";
-
-
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +10,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
-  
+
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
 
@@ -53,7 +51,11 @@ const Signup = () => {
       return;
     }
     try {
-      const res = await axios.post("https://jewellery-web-backend-users.vishcom.net/Signup", formData);
+      const res = await axios.post(
+        "https://jewellery-web-backend-users.vishcom.net/Signup",
+        formData,
+        { withCredentials: true }
+      );
       setMessage(res.data.message);
       alert("Signup successful!");
     } catch (error) {
@@ -67,21 +69,40 @@ const Signup = () => {
       <div className="signup-form1">
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit}>
-
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" value={formData.name} onChange={handleChange}/>
+          <input
+            type="text"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
           {errors.name && <p className="error">{errors.name}</p>}
 
           <label htmlFor="phone">Phone no</label>
-          <input type="text" id="phone" value={formData.phone} onChange={handleChange}/>
+          <input
+            type="text"
+            id="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
           {errors.phone && <p className="error">{errors.phone}</p>}
 
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" value={formData.email} onChange={handleChange} />
+          <input
+            type="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
           {errors.email && <p className="error">{errors.email}</p>}
 
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" value={formData.password} onChange={handleChange} />
+          <input
+            type="password"
+            id="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
           {errors.password && <p className="error">{errors.password}</p>}
           <button type="submit" className="signup-button">
             Sign Up
@@ -90,7 +111,8 @@ const Signup = () => {
         {message && <p>{message}</p>}
 
         <p>
-          Already have an account? <Link to="/login">Login</Link> {/* Use Link to navigate */}
+          Already have an account? <Link to="/login">Login</Link>{" "}
+          {/* Use Link to navigate */}
         </p>
       </div>
     </div>
