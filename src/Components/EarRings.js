@@ -1,7 +1,6 @@
 import React from "react";
 import "./EarRings.css";
-import { useLocation } from "react-router-dom";
- 
+
 import ee1 from '../assets/EarRings/ee1.png';
 import ee2 from '../assets/EarRings/ee2.png';
 import ee3 from '../assets/EarRings/ee3.png';
@@ -16,7 +15,7 @@ import ee11 from '../assets/EarRings/ee11.png';
 import ee12 from '../assets/EarRings/ee12.png';
 import Footer from "./Footer";
 
-const products = [
+const earrings = [
   {
     id: 1,
     name: "White Kundan Jhumka",
@@ -52,7 +51,10 @@ const products = [
     name: "Black Jhumka Earrings",
     price: "₹99",
     image: ee6,
-  },
+  }
+];
+
+const rings = [
   {
     id: 7,
     name: "Gold Plated Rings",
@@ -88,67 +90,18 @@ const products = [
     name: "Multi Stone Ring",
     price: "₹119",
     image: ee12,
-  },
-]
-
-// const details=[ {
-//   id: 1,
-//   name: "Gold Plated Rings",
-//   price: "₹99",
-//   image: ee7,
-// },
-// {
-//   id: 2,
-//   name: "Gold Plated Rings",
-//   price: "₹99",
-//   image: ee8,
-// },
-// {
-//   id: 3,
-//   name: "Diamond & Gold Passion Ring",
-//   price: "₹99",
-//   image: ee9,
-// },
-// {
-//   id: 4,
-//   name: "Princess Ring",
-//   price: "₹119",
-//   image: ee10,
-// },
-// {
-//   id: 5,
-//   name: "Diamond & Gold Passion Ring",
-//   price: "₹149",
-//   image: ee11,
-// },
-// {
-//   id: 6,
-//   name: "Multi Stone Ring",
-//   price: "₹119",
-//   image: ee12,
-// },]
-
-const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
-};
+  }
+];
 
 const EarRings = () => {
-  const query = useQuery().get("name"); // Get product name from URL
-  console.log("Query from URL:", query); // Debugging log
-
-  // Ensure we match case-insensitively and trim spaces
-  const matchedProducts = products.filter(
-    (product) => product.name.toLowerCase().trim() === query?.toLowerCase().trim()
-  );
-  
   return (
     <>
-   <div>
-   <div>
-  <div className="store-container">
-    <div className="store-grid">
-    {matchedProducts.length > 0 ? (
-            matchedProducts.map((product) => (
+      <div className="main-container">
+        
+        <div className="category-section">
+          <h2 className="category-title">Earrings</h2>
+          <div className="store-grid">
+            {earrings.map((product) => (
               <div key={product.id} className="store-item">
                 <img src={product.image} alt={product.name} className="store-img" />
                 <div className="store-info">
@@ -156,10 +109,15 @@ const EarRings = () => {
                   <p>{product.price}</p>
                 </div>
               </div>
-            ))
-          ) : (
-            // If no search is made, show all products
-            products.map((product) => (
+            ))}
+          </div>
+        </div>
+
+        {/* Rings Section */}
+        <div className="category-section">
+          <h2 className="category-title">Rings</h2>
+          <div className="store-grid">
+            {rings.map((product) => (
               <div key={product.id} className="store-item">
                 <img src={product.image} alt={product.name} className="store-img" />
                 <div className="store-info">
@@ -167,18 +125,16 @@ const EarRings = () => {
                   <p>{product.price}</p>
                 </div>
               </div>
-            ))
-          )}
-
-    </div>
-  </div>
-</div>
-
-   </div>
-<div>
-  <Footer />
-</div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <Footer />
+      </div>
     </>
   )
 }
+
 export default EarRings;
