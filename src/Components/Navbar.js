@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaSearch, FaUser } from "react-icons/fa";
+import { FaSearch} from "react-icons/fa";
 import "./Navbar.css";
+import userIcon from "../assets/Logout.png";
 
 
 const products = [
@@ -138,18 +139,18 @@ const Navbar = () => {
 
       
         <div className="user-menu">
-          <Link to="/signup">
-            <FaUser className="user-icon" />
-            <span>SignUp</span>
-          </Link>
-        </div>
+  <Link to="/signup" >
+    <img src={userIcon} alt="User Icon" className="user-icon" />
+   
+  </Link>
+</div>
       </div>
 
       <div className="nav-links">
         <Link to="/all">All</Link>
         <Link to="/necklace">Necklace</Link>
         <Link to="/chains">Chains</Link>
-        <Link to="/earrings">EarRings & Rings</Link>
+        <Link to="/earrings">EarRings</Link>
         <Link to="/bangles">Bangles</Link>
       </div>
     </nav>

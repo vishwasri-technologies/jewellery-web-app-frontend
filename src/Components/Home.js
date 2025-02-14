@@ -1,67 +1,4 @@
-// import React from "react";
-// import "./Home.css";
-// import necklace from "../assets/Home/Necklace.png";
-// import chains from "../assets/Home/Chain.png";
 
-// import earrings from "../assets/Home/Earrings.png";
-// import bangles from "../assets/Home/Bangles.png";
-
-// import arrival1 from "../assets/Home/Arrival1.png";
-// import arrival2 from "../assets/Home/Arrival2.png";
-// import arrival3 from "../assets/Home/Arrival3.png";
-
-// const Home = () => {
-//   return (
-//     <div>
-//       {/* Dazzling Designs Section */}
-//       <div className="dazzling-container">
-//         <div className="dazzling-text">
-//           <h1 className="dazzling-title">Dazzling Designs</h1>
-//           <p className="dazzling-description">
-//             Explore our exquisite collection of handcrafted jewelry,
-//             where every piece is meticulously designed to captivate and shine.
-//             From timeless classics to contemporary masterpieces,
-//             our dazzling designs are crafted with the finest materials
-//             to elevate your elegance.
-//           </p>
-//           <button className="dazzling-button">Explore Now</button>
-//         </div>
-//       </div>
-
-//       {/* Categories Section */}
-//       <div className="categories-section">
-//         <h2 className="section-title">Categories</h2>
-//         <div className="categories">
-//           {[{ img: necklace, name: "Necklace" },
-//             { img: chains, name: "Chains" },
-          
-//             { img: earrings, name: "Ear Rings" },
-//             { img: bangles, name: "Bangles" },
-//            ].map((item, index) => (
-//             <div className="category" key={index}>
-//               <img src={item.img} alt={item.name} />
-//               <p>{item.name}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       {/* Stunning Arrivals Section */}
-//       <div className="stunning-arrivals-section">
-//         <h2 className="section-title">Stunning Arrivals</h2>
-//         <div className="arrivals">
-//           {[arrival1, arrival2, arrival3].map((img, index) => (
-//             <div className="arrival" key={index}>
-//               <img src={img} alt={`Arrival ${index + 1}`} />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Home;
 
 
 
@@ -75,13 +12,14 @@ import bangles from "../assets/Home/Bangles.png";
 import arrival1 from "../assets/Home/Arrival1.png";
 import arrival2 from "../assets/Home/Arrival2.png";
 import arrival3 from "../assets/Home/Arrival3.png";
-import arrival4 from '../assets/Home/Arrival4.png';
+// import arrival4 from '../assets/Home/Arrival4.png';
 import giftImage1 from "../assets/Home/gift-1.png";
 import giftImage2 from "../assets/Home/gift-2.png";
 import About1 from "../assets/Home/About1.png";
 import About2 from "../assets/Home/About2.png";
 import customerImage from "../assets/Home/customerImage.png";
 import Footer from "./Footer";
+// import dazzlingImage from "../assets/womenn.png"
 
 
 const Home = () => {
@@ -93,13 +31,19 @@ const Home = () => {
           <h1 className="dazzling-title">Dazzling Designs</h1>
           <p className="dazzling-description">
             Explore our exquisite collection of handcrafted jewelry, where every
-            piece is meticulously designed to captivate and shine. From timeless
-            classics to contemporary masterpieces, our dazzling designs are
-            crafted with the finest materials to elevate your elegance.
+            piece is meticulously designed to captivate and shine. 
           </p>
           <button className="dazzling-button">Explore Now</button>
         </div>
       </div>
+     
+
+{/* <div className="dazzling-container">
+  <img src={dazzlingImage} alt="Dazzling Designs" className="dazzling-image" />
+</div> */}
+
+
+
 
       {/* Categories Section */}
       <div className="categories-section">
@@ -135,9 +79,9 @@ const Home = () => {
       <div className="expression-container">
         <h2 className="expression-title">Expression of Love</h2>
         <div className="expression-content">
-          <div className="expression-image">
+          {/* <div className="expression-image">
             <img src={arrival4} alt="Rings" />
-          </div>
+          </div> */}
           <div className="expression-text">
             <h3>A symbol of promises made to last</h3>
             <p>
